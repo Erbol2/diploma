@@ -1,0 +1,19 @@
+.Nav {
+  background-color: #00002a;
+}
+.Nav ul {
+  display: flex;
+  margin: 0;
+}
+.Nav .NavItem {
+  padding: 10px;
+  list-style-type: none;
+}
+.Nav .NavItem a {
+  text-decoration: none;
+  color: white;
+}
+.Nav label input {
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+}

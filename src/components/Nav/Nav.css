@@ -1,12 +1,13 @@
 .Nav {
-  background-color: #00002a;
+  background-color: #171a3b;
+  display: flex;
 }
 .Nav ul {
   display: flex;
   margin: 0;
 }
 .Nav .NavItem {
-  padding: 10px;
+  padding: 20px;
   list-style-type: none;
 }
 .Nav .NavItem a {
@@ -16,4 +17,7 @@
 .Nav label input {
   border-radius: 10px;
   margin: 10px 0 0 0;
+}
+.Nav .logo {
+  max-width: 70px;
 }

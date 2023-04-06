@@ -1,15 +1,21 @@
 import Nav from "../Nav/Nav";
+import "./Layout.css";
 
 export default function Layout(props) {
   return (
     <div className="Layout">
       <header>
-        <Nav/>
+        <Nav />
+
+
       </header>
       <aside>
         <nav>Nav Categories</nav>
       </aside>
-      <main>{props.children}</main>
+      <main>{
+        props.children
+      }</main>
       <footer>Footer</footer>
-    </div>);
+    </div>
+  );
 }

@@ -1,13 +1,12 @@
 .Nav {
   background-color: #171a3b;
-  display: flex;
 }
 .Nav ul {
-  display: flex;
+display: flex;
   margin: 0;
 }
 .Nav .NavItem {
-  padding: 20px;
+  padding: 25px;
   list-style-type: none;
 }
 .Nav .NavItem a {

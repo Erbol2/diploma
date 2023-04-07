@@ -1,6 +1,7 @@
 import "./Layout.css";
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
+import CategoryList from "../CategoryList/CategoryList";
 
 export default function Layout(props) {
   return (
@@ -10,7 +11,7 @@ export default function Layout(props) {
         <Nav />
       </header>
       <aside>
-        <nav>Nav Categories</nav>
+        <CategoryList/>
       </aside>
       <main>{
         props.children

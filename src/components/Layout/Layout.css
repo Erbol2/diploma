@@ -6,11 +6,16 @@
     "footer footer";
   grid-template-columns: 1fr 3fr;
 
-  max-width: 999px;
+  max-width: 1180px;
   margin: 0 auto;
+  font-family: "Signika Negative", sans-serif;
+  background-color: #171a3bee;
+  color: white;
 }
 
 .Layout header {
+  display: flex ;
+  align-items: start;
   grid-area: header;
 }
 .Layout aside {

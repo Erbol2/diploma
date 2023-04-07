@@ -14,10 +14,4 @@
   text-decoration: none;
   color: white;
 }
-.Nav label input {
-  border-radius: 10px;
-  margin: 10px 0 0 0;
-}
-.Nav .logo {
-  max-width: 70px;
-}
+

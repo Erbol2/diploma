@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
-
 import "./CategoryList.css";
+
+
 const categories = [
   { id: 1, name: "Action", slug: "action" },
   { id: 2, name: "Shooter", slug: "shooter" },

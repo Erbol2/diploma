@@ -1,0 +1,20 @@
+.CategoryList {
+  color: white;
+  width: 50%;
+}
+.CategoryList ul {
+  padding: 0;
+}
+
+.CategoryList li {
+  list-style-type: none;
+}
+.CategoryList a {
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+  color: white;
+}
+.CategoryList a:hover {
+  background-color: #39429f31;
+}

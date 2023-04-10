@@ -18,4 +18,5 @@
 }
 .Nav .NavItem a:hover {
   background-color: #39429f31;
+  border: 3px solid #39419fad;
 }

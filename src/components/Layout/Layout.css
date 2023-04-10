@@ -14,7 +14,6 @@
 
 .Layout header {
   display: flex ;
-  align-items: start;
   grid-area: header;
 }
 .Layout aside {

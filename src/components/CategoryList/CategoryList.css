@@ -9,6 +9,9 @@
 .CategoryList li {
   list-style-type: none;
 }
+.CategoryList li:hover {
+  background-color: #39429f31;
+}
 .CategoryList a {
   display: block;
   padding: 6px 0;
@@ -16,5 +19,6 @@
   color: white;
 }
 .CategoryList a:hover {
-  background-color: #39429f31;
+  transform: translate(15px);
+  transition: all 500ms ease-in-out;
 }

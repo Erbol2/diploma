@@ -5,9 +5,30 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
+import { createContext, useEffect, useState } from "react";
+import { getDocs } from "firebase/firestore/lite";
+import { categoryCollection } from "./firebase";
 
+export const AppContet = createContext({
+  categories: [],
+});
 
 export default function App() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {//выполнить только однажды
+    return getDocs(categoryCollection) //получить категории 
+      .then(({ docs }) => { // когда катергории загрузились
+        setCategories( // обновить состояние 
+          docs.map(doc => ({ // новый массив
+            ...doc.data(), // из свойств name, slug
+            id: doc.id // и свойства id 
+          }))
+        )
+      });
+  }, []);
+
+
   return (
     <div className="App">
 

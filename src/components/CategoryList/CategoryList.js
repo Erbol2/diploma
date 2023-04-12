@@ -41,7 +41,7 @@ export default function CategoryList() {
 
   return (
     <div className="CategoryList">
-      <i class="fa-solid fa-bars fa-beat"></i>
+      <i class="fa-solid fa-bars fa-beat fa-xl"></i>
       <nav>
         <h3>Categories</h3>
         <ul>{output}</ul>

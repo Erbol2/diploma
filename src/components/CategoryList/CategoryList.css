@@ -39,8 +39,9 @@
 .CategoryList:hover nav {
   display: block;
 }
-.CategoryList .fa-solid.fa-bars {
-  right: 0;
-  bottom: 0;
-
+.CategoryList i {
+  margin: 28px 20px;
+}
+.CategoryList:hover i {
+  display: none;
 }

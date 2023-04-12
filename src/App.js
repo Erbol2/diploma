@@ -9,7 +9,7 @@ import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
 import { categoryCollection } from "./firebase";
 
-export const AppContet = createContext({
+export const AppContext = createContext({
   categories: [],
 });
 
@@ -17,7 +17,7 @@ export default function App() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {//выполнить только однажды
-    return getDocs(categoryCollection) //получить категории 
+     getDocs(categoryCollection) //получить категории 
       .then(({ docs }) => { // когда катергории загрузились
         setCategories( // обновить состояние 
           docs.map(doc => ({ // новый массив
@@ -31,17 +31,18 @@ export default function App() {
 
   return (
     <div className="App">
+      <AppContext.Provider value={{ categories }}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/categories/:slug" element={<Category />} />
 
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/categories/:slug" element={<Category />} />
-
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-    </div>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </AppContext.Provider>
+    </div >
   );
 }

@@ -13,6 +13,7 @@ export default function Category() {
     { id: 4, name: "Slasher", slug: "slasher" },
     { id: 5, name: "Warrior", slug: "warrior" },
     { id: 6, name: "Adventure", slug: "adventure" },
+    { id: 7, name: "Strategy", slug: "strategy" },
   ];
   const category = categories.find(
     (category) => category.slug === params.slug);

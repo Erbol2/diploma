@@ -1,0 +1,24 @@
+.ProductList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ProductList img {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-bottom: 10px;
+}
+.ProductList div {
+  margin: 0 25px 25px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px darkblue;
+  padding-bottom: 10px;
+}
+.ProductList a {
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}

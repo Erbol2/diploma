@@ -1,4 +1,6 @@
 .CategoryList {
+  display: inline-block;
+  position: relative;
   color: white;
   background-color: #141b6583;
   width: 60px;
@@ -25,7 +27,7 @@
 .CategoryList a:hover {
   transform: translate(5px);
   transition: all 300ms ease-in-out;
-} 
+}
 
 .CategoryList nav {
   text-align: center;
@@ -36,7 +38,7 @@
 .CategoryList:hover {
   display: block;
   width: 200px;
-  height: 100%;
+  height: 60%;
   transition: all 300ms ease;
 }
 .CategoryList:hover nav {

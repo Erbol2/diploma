@@ -10,7 +10,7 @@
   border-top-left-radius: 10px;
   padding-bottom: 10px;
 }
-.ProductList div {
+.ProductList .Product {
   margin: 0 25px 25px 0;
   border: 1px solid black;
   border-radius: 10px;

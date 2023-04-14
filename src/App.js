@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
 import { categoryCollection, productsCollection } from "./firebase";
+import Product from "./pages/Product";
 
 export const AppContext = createContext({
   categories: [],
@@ -50,6 +51,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/categories/:slug" element={<Category />} />
+            <Route path="/products/:slug" element={<Product />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

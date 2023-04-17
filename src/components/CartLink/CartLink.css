@@ -1,0 +1,9 @@
+.CartLink {
+  display: flex;
+  width: 100px;
+  align-items: center;
+}
+.CartLink a {
+  text-decoration: none;
+  color: white;
+}

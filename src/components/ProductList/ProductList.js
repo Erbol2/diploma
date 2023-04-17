@@ -2,11 +2,12 @@ import "./ProductList.css";
 import { useContext } from "react";
 import { AppContext } from "../../App";
 import { NavLink } from "react-router-dom";
+import AddToCart from "../AddToCart/AddToCart";
 
 export default function ProductList({ category }) {
   const { products } = useContext(AppContext);
 
-  
+
   const output = products
     .filter(product => product.category === category.id)
     .map(product => (
@@ -16,6 +17,7 @@ export default function ProductList({ category }) {
           {product.name}
         </NavLink>
         <span>{product.price}</span>
+        <AddToCart product={product} />
       </div>
     ));
 

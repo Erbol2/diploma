@@ -9,6 +9,7 @@ import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
 import { categoryCollection, productsCollection } from "./firebase";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
 
 export const AppContext = createContext({
   categories: [],
@@ -16,7 +17,7 @@ export const AppContext = createContext({
 
   // контекст для корзины
   cart: {}, // содержимое корзинки
-  setCart: () => {}, //изменить содежимое корзинки
+  setCart: () => { }, //изменить содежимое корзинки
 });
 
 export default function App() {
@@ -53,6 +54,7 @@ export default function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/categories/:slug" element={<Category />} />

@@ -9,7 +9,7 @@ export default function AddToCart({ product }) {
     // const qty = cart[product.id] ? cart[product.id] + 1 : 1;  купить товар много раз 
     setCart({
       ...cart, // положить текущее содержимое корзинки
-      [product.id]: " Already add", // добавить текущий товар
+      [product.id]: 1, // добавить текущий товар
     });
   }
 

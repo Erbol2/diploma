@@ -6,7 +6,7 @@ export default function CartLink() {
 
   const { cart } = useContext(AppContext)
 
-  const total = Object.values(cart).reduce((acc, num) => acc + num, 0)
+  const total = Object.values(cart).reduce((acc, num) => acc + num, "")
   return (
     <div className="CartLink">
       <NavLink to="/cart">

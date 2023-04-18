@@ -1,8 +1,27 @@
 .CartList .CartItem {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  background-color: #40457850;
+  border: 2px solid rgb(90, 34, 173);
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 .CartList .CartItem img {
   width: 220px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.CartList .CartItem a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 30px;
+}
+.CartList .CartItem span.price {
+  font-size: 25px;
+  margin: 0 auto;
+}
+.CartList .CartItem span.remove {
+  margin: 20px;
+  font-size: 25px;
 }

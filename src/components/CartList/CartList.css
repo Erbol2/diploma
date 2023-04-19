@@ -22,6 +22,7 @@
   margin: 0 auto;
 }
 .CartList .CartItem span.remove {
+  cursor: pointer;
   margin: 20px;
   font-size: 25px;
 }

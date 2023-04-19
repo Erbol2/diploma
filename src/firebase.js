@@ -18,7 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const auth = getAuth(db);
+const auth = getAuth(app);
 
 export const categoryCollection = collection(db, 'categories');
 export const productsCollection = collection(db, 'products');

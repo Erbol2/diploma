@@ -25,6 +25,6 @@ export const productsCollection = collection(db, 'products');
 export const ordersCollection = collection(db, 'orders');
 
 const provider = new GoogleAuthProvider();
-export const signIn = () => signInWithPopup(auth, provider);
-export const signOff = () => signOut(auth);
+export const logIn = () => signInWithPopup(auth, provider);
+export const logOut = () => signOut(auth);
 export const onAuthChange = (callback) => onAuthStateChanged(auth, callback);

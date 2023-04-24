@@ -19,7 +19,7 @@ export default function Product() {
         <source src={product.video} type="video/mp4"/>
       </video>
       <img style={{width: 450}} src={product.picture} alt={product.name} />
-      <span>{product.price}</span>
+      <span>{product.price} $</span>
     </div>
   )
 }

@@ -1,11 +1,13 @@
 .Auth .signIn {
   margin: 15px 0 0 0;
+  cursor: pointer;
 }
 .Auth {
   display: flex;
   font-size: 20px;
-  margin:  23px 0 0 0 ;
+  margin: 23px 0 0 0;
 }
 .Auth .signOff {
-  margin:12px 0 0 10px;
-}
+  margin: 12px 0 0 10px;
+  cursor: pointer;
+  }

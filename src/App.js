@@ -7,15 +7,16 @@ import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection, onAuthChange, productsCollection } from "./firebase";
+import { categoryCollection, onAuthChange, ordersCollection, productsCollection } from "./firebase";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
+import Orders from "./pages/Orders";
 
 export const AppContext = createContext({
   categories: [],
   products: [],
-
+  orders: [],
   // контекст для корзины
   cart: {}, // содержимое корзинки
   setCart: () => { }, //изменить содежимое корзинки
@@ -26,6 +27,8 @@ export const AppContext = createContext({
 export default function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
+
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem('cart')) || {};
   });
@@ -57,15 +60,25 @@ export default function App() {
         )
       });
 
-      onAuthChange(user => {
-        setUser(user);
+    getDocs(ordersCollection) //получить категории 
+      .then(({ docs }) => { // когда катергории загрузились
+        setOrders( // обновить состояние 
+          docs.map(doc => ({ // новый массив
+            ...doc.data(), // из свойств name, slug
+            id: doc.id // и свойства id 
+          }))
+        )
       });
+
+    onAuthChange(user => {
+      setUser(user);
+    });
   }, []);
 
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ categories, products, cart, setCart, user }}>
+      <AppContext.Provider value={{ categories, products, cart, setCart, user, orders }}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -75,6 +88,7 @@ export default function App() {
             <Route path="/categories/:slug" element={<Category />} />
             <Route path="/products/:slug" element={<Product />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/orders" element={<Orders />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

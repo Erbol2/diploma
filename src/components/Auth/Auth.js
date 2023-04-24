@@ -7,9 +7,9 @@ export default function Auth() {
   const {user} =useContext(AppContext);
   return (
     <div className="Auth">
-      {!user ? <button onClick={signIn}>Sign In</button> : null}
+      {!user ? <i onClick={signIn} className="fa-solid fa-right-to-bracket fa-2xl signIn"></i> : null}
       {user ? <span>{user.displayName}</span> : null}
-      {user ? <button onClick={signOff}>Sign out</button> : null}
+      {user ? <i onClick={signOff} className="fa-solid fa-right-from-bracket fa-lg signOff"></i> : null}
     </div>
   )
 }

@@ -1,0 +1,20 @@
+.AddToCart {
+  position: relative;
+}
+.AddToCart .addBtn {
+  background-color: #6200ee;
+  color: white;
+  max-width: 100px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Signika Negative", sans-serif;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+}
+.AddToCart .addBtn:active {
+  background-color: rgb(180, 105, 180);
+}

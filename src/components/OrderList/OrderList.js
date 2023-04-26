@@ -14,19 +14,23 @@ export default function OrderList() {
       const product = products.find(product => product.id === productId);
 
       return (
-        <div>
+        <li>
           {product.name}: {product.price} $
-        </div>
+        </li>
       );
     })
 
     return (
-      <div className="Order">
-        <div>Name: {order.name}</div>
-        <div>Phone: {order.phone}</div>
-        <div>Address: {order.address}</div>
-        <div>Cart: {cartOutput}</div>
-      </div>
+      <ul className="Order">
+        <li>Name: {order.name}</li>
+        <li>Phone: {order.phone}</li>
+        <li>Address: {order.address}</li>
+        <li>Cart:
+          <ol>
+            {cartOutput}
+          </ol>
+        </li>
+      </ul>
     );
   })
 

@@ -10,4 +10,8 @@
 .Auth .signOff {
   margin: 12px 0 0 10px;
   cursor: pointer;
-  }
+}
+.Auth a {
+  color: white;
+  text-decoration: none;
+}

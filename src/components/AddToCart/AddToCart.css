@@ -1,5 +1,6 @@
 .AddToCart {
   position: relative;
+  padding-bottom: 15px;
 }
 .AddToCart .addBtn {
   background-color: #6200ee;
@@ -14,7 +15,13 @@
   position: absolute;
   right: 10px;
   bottom: -20px;
+  z-index: 1;
 }
 .AddToCart .addBtn:active {
   background-color: rgb(180, 105, 180);
+}
+.AddToCart span {
+  position: absolute;
+  right: 30px;
+  top: 10px;
 }

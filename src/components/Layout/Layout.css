@@ -21,6 +21,7 @@
 }
 .Layout main {
   grid-area: main;
+  width: 100%;
 }
 .Layout footer {
   grid-area: footer;

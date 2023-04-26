@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useContext  } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../App";
 import "./CategoryList.css";
 
@@ -16,7 +16,7 @@ export default function CategoryList() {
 
   return (
     <div className="CategoryList">
-      <i className="fa-solid fa-bars fa-beat fa-xl"></i>
+        <i className="fa-solid fa-bars fa-beat fa-xl"></i>
       <nav>
         <h3>Categories</h3>
         <ul>{output}</ul>

@@ -1,12 +1,15 @@
 .CategoryList {
-  display: inline-block;
   position: relative;
-  color: white;
+  display: inline-block;
   background-color: #141b65;
+  color: white;
   width: 60px;
   height: 60px;
-  border-radius: 30px;
-  transition: all 300ms ease;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-family: inherit;
 }
 .CategoryList ul {
   padding: 0;
@@ -28,27 +31,23 @@
   transform: translate(5px);
   transition: all 300ms ease-in-out;
 }
-
+.CategoryList i {
+  margin: 28px 20px;
+}
 .CategoryList nav {
   text-align: center;
   display: none;
-  padding: 10px 0;
   position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-.CategoryList:hover {
-  display: inline-block;
-  position: absolute;
-  width: 200px;
-  height: 490px;
-  transition: all 300ms ease;
+  background-color: #141b65;
+  min-width: 200px;
+  z-index: 1;
+  margin: 0;
+  border-radius: 30px;
+  padding: 0;
 }
 .CategoryList:hover nav {
   display: block;
-}
-.CategoryList i {
-  margin: 28px 20px;
+  transition: all 300ms easy
 }
 .CategoryList:hover i {
   display: none;

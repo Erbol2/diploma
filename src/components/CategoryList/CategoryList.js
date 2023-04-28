@@ -20,6 +20,7 @@ export default function CategoryList() {
   return (
     <div className="CategoryList">
       <i className="fa-solid fa-bars fa-beat fa-xl"></i>
+      <h2>Categories</h2>
       <nav>
         <h3>Categories</h3>
         <ul>{output}</ul>

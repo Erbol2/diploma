@@ -1,6 +1,6 @@
 .Nav {
   width: 100%;
-  background-color: #064D54;
+  background-color: #064d54;
   display: flex;
 }
 .Nav ul {
@@ -12,10 +12,13 @@
   list-style-type: none;
 }
 .Nav .NavItem a {
-  padding: 25px;
   text-decoration: none;
+  padding: 25px 25px 10px 25px;
+  border-bottom: 3px solid #FFBA20;
+  transition: 0.3s ease;
 }
 .Nav .NavItem a:hover {
-  background-color: #39429f31;
-  border: 3px solid #39419fad;
+  
+  padding: 25px 25px 14px 25px;
+  border-color: white;
 }

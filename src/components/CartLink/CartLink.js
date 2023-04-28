@@ -10,7 +10,7 @@ export default function CartLink() {
   return (
     <div className="CartLink">
       <NavLink to="/cart">
-        <i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff", }}>({total})</i>
+        <i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffba20", }}>({total})</i>
       </NavLink>
     </div >
   )

@@ -1,6 +1,6 @@
 .Nav {
   width: 100%;
-  background-color: #171a3b;
+  background-color: #064D54;
   display: flex;
 }
 .Nav ul {
@@ -14,7 +14,6 @@
 .Nav .NavItem a {
   padding: 25px;
   text-decoration: none;
-  color: white;
 }
 .Nav .NavItem a:hover {
   background-color: #39429f31;

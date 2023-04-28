@@ -64,7 +64,8 @@ export default function App() {
 
     onAuthChange((user) => {
       if (user) {
-        user.isAdmin = user && user.email === "alymbekov2004@gmail.com";
+        user.isAdmin = user && user.email === 
+        "alymbekov2004@gmail.com";
       }
       setUser(user);
     });

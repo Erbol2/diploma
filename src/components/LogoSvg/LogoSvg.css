@@ -1,0 +1,19 @@
+path {
+  width: 100%;
+  fill: none;
+  stroke : #FFBA20;
+  stroke-dasharray: 340;
+  stroke-dashoffset: 0;
+  stroke-width: 20;
+  stroke-linecap: round;
+  animation: motion 3s linear normal infinite;
+}
+@keyframes motion {
+0% {
+  stroke-dashoffset: 0;
+}
+
+100% {
+  stroke-dashoffset: 680;
+}
+}

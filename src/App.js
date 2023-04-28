@@ -6,8 +6,7 @@ import Contacts from "./pages/Contacts";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { getDocs } from "firebase/firestore";
-import { onAuthChange, onCategoriesLoad, ordersCollection, productsCollection } from "./firebase";
+import { onAuthChange, onCategoriesLoad, onOrdersLoad, onProductsLoad } from "./firebase";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
@@ -41,31 +40,14 @@ export default function App() {
 
   useEffect(() => {//выполнить только однажды
     onCategoriesLoad(setCategories);
+    onProductsLoad(setProducts);
+    onOrdersLoad(setOrders);
 
-    getDocs(productsCollection) //получить категории 
-      .then(({ docs }) => { // когда катергории загрузились
-        setProducts( // обновить состояние 
-          docs.map(doc => ({ // новый массив
-            ...doc.data(), // из свойств name, slug
-            id: doc.id // и свойства id 
-          }))
-        )
-      });
-
-    getDocs(ordersCollection) //получить категории 
-      .then(({ docs }) => { // когда катергории загрузились
-        setOrders( // обновить состояние 
-          docs.map(doc => ({ // новый массив
-            ...doc.data(), // из свойств name, slug
-            id: doc.id // и свойства id 
-          }))
-        )
-      });
 
     onAuthChange((user) => {
       if (user) {
-        user.isAdmin = user && user.email === 
-        "alymbekov2004@gmail.com";
+        user.isAdmin = user && user.email ===
+          "alymbekov2004@gmail.com";
       }
       setUser(user);
     });

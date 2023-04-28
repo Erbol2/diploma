@@ -3,7 +3,7 @@
   display: inline-block;
   background-color: #ffba20;
   width: 60px;
-  height: 550px;
+  min-height: 550px;
   font-size: 16px;
   border: none;
   cursor: pointer;

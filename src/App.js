@@ -6,8 +6,8 @@ import Contacts from "./pages/Contacts";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection, onAuthChange, ordersCollection, productsCollection } from "./firebase";
+import { getDocs } from "firebase/firestore";
+import { onAuthChange, onCategoriesLoad, ordersCollection, productsCollection } from "./firebase";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
@@ -40,15 +40,7 @@ export default function App() {
   }, [cart]);
 
   useEffect(() => {//выполнить только однажды
-    getDocs(categoryCollection) //получить категории 
-      .then(({ docs }) => { // когда катергории загрузились
-        setCategories( // обновить состояние 
-          docs.map(doc => ({ // новый массив
-            ...doc.data(), // из свойств name, slug
-            id: doc.id // и свойства id 
-          }))
-        )
-      });
+    onCategoriesLoad(setCategories);
 
     getDocs(productsCollection) //получить категории 
       .then(({ docs }) => { // когда катергории загрузились
@@ -70,7 +62,10 @@ export default function App() {
         )
       });
 
-    onAuthChange(user => {
+    onAuthChange((user) => {
+      if (user) {
+        user.isAdmin = user && user.email === "alymbekov2004@gmail.com";
+      }
       setUser(user);
     });
   }, []);

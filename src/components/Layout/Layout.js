@@ -12,7 +12,7 @@ export default function Layout(props) {
         <Logo />
         <Nav />
         <CartLink />
-        <Auth/>
+        <Auth />
       </header>
       <aside>
         <CategoryList />
@@ -20,7 +20,11 @@ export default function Layout(props) {
       <main>{
         props.children
       }</main>
-      <footer>Footer</footer>
+      <footer>
+        <a href="https://youtu.be/dQw4w9WgXcQ">
+          <i className="fa-brands fa-youtube fa-2xl" style={{ margin: "20px 0 0 100px"}}></i>
+        </a>
+      </footer>
     </div>
   );
 }

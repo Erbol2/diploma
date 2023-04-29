@@ -18,7 +18,9 @@
   transition: 0.3s ease;
 }
 .Nav .NavItem a:hover {
-  
   padding: 25px 25px 14px 25px;
-  border-color: white;
+  border-color: #FFD984;
+}
+.Nav .NavItem a:focus {
+  border-color: #FFd984;
 }

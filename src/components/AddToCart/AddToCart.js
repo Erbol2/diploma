@@ -15,9 +15,12 @@ export default function AddToCart({ product }) {
 
   return (
     <div className="AddToCart">
-      <button onClick={onAddToCartClick} className="addBtn">Add to Cart</button>
+      <button onClick={onAddToCartClick} className="addBtn">Add to Cart
+        <i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#084d54", }}></i>
+      </button>
       <span>
         {cart[product.id] ? cart[product.id] : 0}
       </span>
+
     </div>)
 }

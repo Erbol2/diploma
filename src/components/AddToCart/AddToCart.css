@@ -3,25 +3,31 @@
   padding-bottom: 15px;
 }
 .AddToCart .addBtn {
-  background-color: #6200ee;
-  color: white;
-  max-width: 100px;
-  width: 100px;
+  background-color: #ffba20;
+  color: #064d54;
+  max-width: 140px;
+  width: 140px;
+  height: 40px;
   border: none;
   border-radius: 3px;
-  padding: 5px 10px;
+  padding: 5px 5px 5px 0;
   cursor: pointer;
   font-family: "Signika Negative", sans-serif;
   position: absolute;
   right: 10px;
-  bottom: -20px;
+  bottom: -30px;
   z-index: 1;
 }
-.AddToCart .addBtn:active {
-  background-color: rgb(180, 105, 180);
+.AddToCart .addBtn:hover {
+  background-color: #ffcb58;
 }
 .AddToCart span {
   position: absolute;
   right: 30px;
-  top: 10px;
+  bottom: -10px;
+}
+.AddToCart i {
+  position: absolute;
+  bottom: 18px;
+  right: 10px;
 }

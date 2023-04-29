@@ -38,7 +38,7 @@ export default function CartList() {
           onChange={(event) => onQuantityChange(product, +event.target.value)} /> */}
         <span className="price">{cart[product.id] * product.price} $</span>
         <span className="remove" onClick={() => onItemRemove(product)} >
-          <i className="fa-solid fa-xmark fa-lg " style={{ color: "#ffffff" }}></i>
+          <i className="fa-solid fa-xmark fa-lg " style={{ color: "#FFBA20" }}></i>
         </span>
       </div >))
   return (

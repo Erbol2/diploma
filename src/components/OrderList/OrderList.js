@@ -30,13 +30,16 @@ export default function OrderList() {
             {cartOutput}
           </ol>
         </li>
-      </ul>
+        <p>Successfully
+          <i className="fa-solid fa-check" style={{margin: "10px"}}></i>
+      </p>
+      </ul >
     );
-  })
+})
 
-  return (
-    <div className="OrderList">
-      {output}
-    </div>
-  );
+return (
+  <div className="OrderList">
+    {output}
+  </div>
+);
 }

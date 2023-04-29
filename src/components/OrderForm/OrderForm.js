@@ -37,10 +37,14 @@ export default function OrderForm() {
     <form className="OrderForm" onSubmit={onFormSubmit}>
       <h2>Create an order</h2>
       <label>
-        Name: <input type="text" name="name" required />
+        Name:
+        <i className="fa-solid fa-user" style={{ margin: " 0 2px 0 10px" }}></i>
+        <input type="text" name="name" required placeholder="First Name" />
       </label>
       <label>
-        Phohe: <input type="tel" name="phone" required />
+        Phohe:
+        <i className="fa-solid fa-phone" style={{ margin: "0 2px 0 10px" }}></i>
+        <input type="tel" name="phone" required placeholder="+996(707) 707 707" />
       </label>
       <button>Submit</button>
     </form>

@@ -23,4 +23,5 @@
 }
 .Nav .NavItem a:focus {
   border-color: #FFd984;
+  padding-bottom: 14px;
 }

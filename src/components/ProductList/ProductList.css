@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.ProductList img {
+.ProductList a img {
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -22,3 +22,5 @@
   padding: 15px;
   text-decoration: none;
 }
+.ProductList A:first-child {
+padding: 0;}

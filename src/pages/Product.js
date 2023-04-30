@@ -13,13 +13,17 @@ export default function Product() {
   }
 
   return (
-    <div className="Product">
-      <h1>{product.name}</h1>
-      <video width="500" height="300" controls="controls">
-        <source src={product.video} type="video/mp4"/>
-      </video>
-      <img style={{width: 450}} src={product.picture} alt={product.name} />
-      <span>{product.price} $</span>
+    <div style={{ display: "flex" }} className="Product">
+      <div>
+        <h1>{product.name}</h1>
+        <video width="500" height="300" controls="controls">
+          <source src={product.video} type="video/mp4" />
+        </video>
+      </div>
+      <div style={{ margin: "93px 0 0 20px" }} className="content">
+        <img style={{ width: "250px", display: "flex" }} src={product.picture} alt={product.name} />
+        <span style={{ fontSize: "24px" }}>{product.price} $</span>
+      </div>
     </div>
   )
 }

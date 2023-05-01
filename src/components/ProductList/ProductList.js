@@ -8,7 +8,7 @@ import AddProduct from "../AddProduct/AddProduct";
 export default function ProductList({ category }) {
   const { products } = useContext(AppContext);
 
-
+  
   const output = products
     .filter(product => product.category === category.id)
     .map(product => (

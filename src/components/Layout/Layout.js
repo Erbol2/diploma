@@ -4,6 +4,7 @@ import Nav from "../Nav/Nav";
 import CategoryList from "../CategoryList/CategoryList";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
+import Footer from "../Footer/Footer";
 
 export default function Layout(props) {
   return (
@@ -21,9 +22,7 @@ export default function Layout(props) {
         props.children
       }</main>
       <footer>
-        <a href="https://youtu.be/dQw4w9WgXcQ">
-          <i className="fa-brands fa-youtube fa-2xl" style={{ margin: "20px 0 0 100px"}}></i>
-        </a>
+        <Footer />
       </footer>
     </div>
   );

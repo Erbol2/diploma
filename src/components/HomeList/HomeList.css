@@ -1,3 +1,6 @@
-/* .HomeList {
-  position: absolute;
-} */
+.HomeList .slider_img {
+  max-width: 100%;
+}
+.HomeList img {
+  width: 100%;
+}

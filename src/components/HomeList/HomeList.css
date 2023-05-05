@@ -2,19 +2,22 @@
   max-width: 65%;
   box-sizing: border-box;
   border-radius: 25px;
+  border: 2px solid #FFBA20;
 }
 .HomeList .slider_img {
   max-width: 100%;
 }
 .HomeList img {
+  border-radius: 25px;
   width: 100%;
   position: relative;
+  vertical-align:bottom;
 }
 .HomeList .HomeProduct .content {
   display: none;
   background-color: #ffb820bb;
   position: absolute;
-  width: 100%;
+  width: 90%;
   padding: 40px 30px;
 }
 .HomeList .HomeProduct .content a {
@@ -25,18 +28,21 @@
 .HomeList .HomeProduct .content span {
   color: #064d54;
   font-size: 24px;
-  margin-left: 40%;
+  margin-left: 30%;
 }
 .HomeList .HomeProduct:hover .content {
   display: block;
   animation: in-top 500ms ease forwards;
   backdrop-filter: blur(15px);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 @keyframes in-top {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-110px);
+    transform: translateY(-109px);
   }
 }
+

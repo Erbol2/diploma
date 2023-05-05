@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "./HomeList.css";
@@ -6,16 +6,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 import { useContext } from 'react';
 import { AppContext } from '../../App';
 import { NavLink } from 'react-router-dom';
 
-export default function HomeList({ category }) {
-  // const swiper = new Swiper('.swiper', {
-  //   autoplay: {
-  //     delay: 5000,
-  //   },
-  // });
+export default function HomeList() {
   const { products } = useContext(AppContext);
 
   const output = products
@@ -38,15 +34,14 @@ export default function HomeList({ category }) {
     <div className='HomeList'>
       <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
-
-
+        autoplay={{ delay: 3000 }}
       >
         <SwiperSlide >
           <div className='slider_img'>

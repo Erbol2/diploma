@@ -6,14 +6,34 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import cyberpunk2077 from "../../assets/cyberpunk2077.jpeg"
-import thewitcher3 from "../../assets/thewitcher3.jpg"
-export default function HomeList() {
+import { useContext } from 'react';
+import { AppContext } from '../../App';
+import { NavLink } from 'react-router-dom';
+
+export default function HomeList({ category }) {
   // const swiper = new Swiper('.swiper', {
   //   autoplay: {
   //     delay: 5000,
   //   },
   // });
+  const { products } = useContext(AppContext);
+
+  const output = products
+    .map(product => (
+      <div key={product.id} className="HomeProduct">
+        <NavLink to={'/products/' + product.slug}>
+          <img src={product.picture} alt={product.name} />
+        </NavLink>
+        <div className='content'>
+          <NavLink to={'/products/' + product.slug}>
+            {product.name}
+          </NavLink>
+          <span>{product.price} $</span>
+        </div>
+      </div>
+    ))
+
+
   return (
     <div className='HomeList'>
       <Swiper
@@ -28,17 +48,26 @@ export default function HomeList() {
 
 
       >
-        <SwiperSlide>
+        <SwiperSlide >
           <div className='slider_img'>
-            <img src={cyberpunk2077} alt='cyberpunk2077' />
+            {output[0]}
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className='slider_img'>
-            <img src={thewitcher3} alt='cyberpunk2077' />
-          </div></SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
-        <SwiperSlide>4</SwiperSlide>
+            {output[3]}
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='slider_img'>
+            {output[2]}
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='slider_img'>
+            {output[4]}
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

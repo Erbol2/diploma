@@ -45,12 +45,12 @@
   display: none;
   position: absolute;
   background-color: #ffba20;
-  min-width: 200px;
   min-height: 550px;
   z-index: 1;
   margin: 0;
   border-radius: 30px;
   padding: 0;
+  animation: in-right 500ms ease forwards;
 }
 .CategoryList:hover nav {
   display: block;
@@ -65,4 +65,12 @@
 }
 .CategoryList:hover h2 {
   display: none;
+}
+@keyframes in-right {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 200px;
+  }
 }

@@ -1,0 +1,12 @@
+.ContactList {
+  display: flex;
+}
+.ContactList a i {
+  margin: 5px;
+}
+.ContactList .img-block {
+  max-width: 450px;
+}
+.ContactList .img-block img {
+  max-width: 100%;
+}

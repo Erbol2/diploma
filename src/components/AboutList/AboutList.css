@@ -1,0 +1,12 @@
+.AboutList {
+  display: flex;
+}
+.AboutList .aboutContent {
+  max-width: 50%;
+}
+.AboutList .aboutImg {
+  max-width: 500px;
+}
+.AboutList .aboutImg img {
+  width: 100%;
+}

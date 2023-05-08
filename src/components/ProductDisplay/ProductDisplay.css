@@ -1,0 +1,8 @@
+.ProductDisplay {
+  text-align: center;
+}
+.ProductDisplay a,
+span {
+  color: #064D54;
+  text-decoration: none;
+}

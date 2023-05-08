@@ -1,8 +1,8 @@
 .CartList .CartItem {
   display: flex;
   align-items: center;
-  background-color: #133B3F;
-  border: 2px solid #FFBA20;
+  background-color: #133b3f;
+  border: 2px solid #ffba20;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -12,12 +12,13 @@
   border-top-left-radius: 10px;
 }
 .CartList .CartItem a {
-  color: #FFBA20;
+  color: #ffba20;
   text-decoration: none;
   margin: 20px;
   font-size: 30px;
 }
 .CartList .CartItem span.price {
+  color: #ffba20;
   font-size: 25px;
   margin: 0 auto;
 }

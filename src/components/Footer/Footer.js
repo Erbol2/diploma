@@ -7,7 +7,7 @@ export default function Footer() {
         <i className="fa-brands fa-instagram"></i>
       </a>
       <a href="https://youtu.be/dQw4w9WgXcQ">
-        <i className="fa-brands fa-youtube fa-2xl"></i>
+        <i className="fa-brands fa-youtube"></i>
       </a>
       <a href="/">
         <i className="fa-brands fa-github"></i>

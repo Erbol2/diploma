@@ -10,6 +10,7 @@ import 'swiper/css/autoplay';
 import { useContext } from 'react';
 import { AppContext } from '../../App';
 import { NavLink } from 'react-router-dom';
+import Randomizer from '../Randomizer/Randomizer';
 
 export default function HomeList() {
   const { products } = useContext(AppContext);
@@ -32,38 +33,41 @@ export default function HomeList() {
 
   return (
     <div className='HomeList'>
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-        autoplay={{ delay: 3000 }}
-      >
-        <SwiperSlide >
-          <div className='slider_img'>
-            {output[0]}
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='slider_img'>
-            {output[3]}
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='slider_img'>
-            {output[2]}
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='slider_img'>
-            {output[4]}
-          </div>
-        </SwiperSlide>
-      </Swiper>
+      <div className='slider'>
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+          autoplay={{ delay: 3000 }}
+        >
+          <SwiperSlide >
+            <div className='slider_img'>
+              {output[0]}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='slider_img'>
+              {output[3]}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='slider_img'>
+              {output[2]}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='slider_img'>
+              {output[4]}
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <Randomizer />
     </div>
   );
 };

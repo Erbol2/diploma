@@ -1,4 +1,7 @@
 .HomeList {
+  display: flex;
+}
+.HomeList .slider {
   max-width: 65%;
   box-sizing: border-box;
   border-radius: 25px;

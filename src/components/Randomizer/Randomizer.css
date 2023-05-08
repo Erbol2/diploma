@@ -1,0 +1,23 @@
+.Randomizer {
+  padding: 10px;
+  background-color: #ffba20;
+  max-width: 300px;
+  max-height: 260px ;
+  height: 100%;
+  border-radius: 25px;
+  width: 100%;
+  margin-left: auto;
+  text-align: center;
+}
+.Randomizer h2 {
+  color: #064d54;
+}
+.Randomizer i {
+  cursor: pointer;
+  color: #064d54;
+  font-size: 40px;
+  padding: 25px;
+}
+.Randomizer img {
+  width: 100%;
+}

@@ -2,7 +2,7 @@
   display: flex;
 }
 .HomeList .slider {
-  max-width: 65%;
+  max-width: 610px;
   box-sizing: border-box;
   border-radius: 25px;
   border: 2px solid #FFBA20;

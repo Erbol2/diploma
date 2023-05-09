@@ -10,7 +10,6 @@
   margin: 0 auto;
   font-family: "Signika Negative", sans-serif;
   color: white;
-  position: relative;
 }
 
 .Layout header {
@@ -23,7 +22,6 @@
 .Layout main {
   grid-area: main;
   width: 100%;
-  position: absolute;
 }
 .Layout footer {
   grid-area: footer;

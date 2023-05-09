@@ -9,8 +9,8 @@ export default function CategoryList() {
   const { categories } = useContext(AppContext)
 
   const output = categories.map((category) => (
-    <li key={category.id}>
-      <NavLink to={"/categories/" + category.slug}>{category.name}</NavLink>
+    <li className="item" key={category.id}>
+      <NavLink className="links" to={"/categories/" + category.slug}>{category.name}</NavLink>
       <DeleteCategory category={category} />
     </li>
   ));
@@ -26,6 +26,10 @@ export default function CategoryList() {
           <ul>{output}</ul>
           <AddCategory />
         </nav>
+      </div>
+      <div className="mini_nav">
+        <h3>Categories</h3>
+        <ul>{output}</ul>
       </div>
     </div>
   );

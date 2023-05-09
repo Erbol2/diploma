@@ -19,20 +19,20 @@
 .CategoryList ul {
   padding: 0;
 }
-.CategoryList .aside_nav li {
+.CategoryList .item {
   list-style-type: none;
 }
-.CategoryList .aside_nav li:hover {
+.CategoryList .item:hover {
   background-color: #ffcb58;
 }
-.CategoryList .aside_nav a {
+.CategoryList .links {
   text-align: center;
   display: block;
   padding: 10px;
   text-decoration: none;
   color: #064d54;
 }
-.CategoryList .aside_nav a:hover {
+.CategoryList .links:hover {
   transform: translate(5px);
   transition: all 300ms ease-in-out;
 }
@@ -66,6 +66,9 @@
 .CategoryList .aside_nav:hover h2 {
   display: none;
 }
+.CategoryList .mini_nav {
+  display: none;
+}
 @keyframes in-right {
   from {
     width: 60px;
@@ -75,7 +78,44 @@
   }
 }
 @media screen and (max-width: 689px) {
+  .CategoryList {
+    text-align: center;
+    position: relative;
+  }
   .CategoryList .aside_nav {
     display: none;
+  }
+  .CategoryList .mini_nav {
+    display: inline-block;
+    background-color: #ffba20;
+    width: 100%;
+    border-radius: 25px;
+    height: 60px;
+    z-index: 2;
+    left: 0;
+  }
+  .CategoryList .mini_nav ul {
+    position: absolute;
+    display: none;
+    background-color: #ffba20;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    left: 0;
+  }
+  .CategoryList .mini_nav h3 {
+    color: #064d54;
+  }
+  .CategoryList .mini_nav:hover {
+    height: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+  .CategoryList .mini_nav:hover ul {
+    display: inline-block;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 0 0 25px;
   }
 }

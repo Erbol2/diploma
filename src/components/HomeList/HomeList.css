@@ -89,3 +89,12 @@
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 689px) {
+  .HomeList .slider {
+    max-width: 520px;
+  }
+  .HomeList .HomeProduct .content {
+    padding: 30px 27px;
+    margin-top: 30px;
+  }
+}

@@ -1,4 +1,4 @@
-.CategoryList {
+.CategoryList .aside_nav {
   position: relative;
   display: inline-block;
   background-color: #ffba20;
@@ -13,34 +13,34 @@
   border-bottom-right-radius: 35px;
   font-family: inherit;
 }
-.CategoryList h3 {
+.CategoryList .aside_nav h3 {
   color: #064d54;
 }
 .CategoryList ul {
   padding: 0;
 }
-.CategoryList li {
+.CategoryList .aside_nav li {
   list-style-type: none;
 }
-.CategoryList li:hover {
+.CategoryList .aside_nav li:hover {
   background-color: #ffcb58;
 }
-.CategoryList a {
+.CategoryList .aside_nav a {
   text-align: center;
   display: block;
   padding: 10px;
   text-decoration: none;
   color: #064d54;
 }
-.CategoryList a:hover {
+.CategoryList .aside_nav a:hover {
   transform: translate(5px);
   transition: all 300ms ease-in-out;
 }
-.CategoryList i {
+.CategoryList .aside_nav i {
   margin: 28px 20px;
   color: #064d54;
 }
-.CategoryList nav {
+.CategoryList .aside_nav nav {
   text-align: center;
   display: none;
   position: absolute;
@@ -52,18 +52,18 @@
   padding: 0;
   animation: in-right 500ms ease forwards;
 }
-.CategoryList:hover nav {
+.CategoryList .aside_nav:hover nav {
   display: block;
 }
-.CategoryList:hover i {
+.CategoryList .aside_nav:hover i {
   display: none;
 }
-.CategoryList h2 {
+.CategoryList .aside_nav h2 {
   color: #064d54;
   transform: rotate(-90deg);
   margin-top: 225px;
 }
-.CategoryList:hover h2 {
+.CategoryList .aside_nav:hover h2 {
   display: none;
 }
 @keyframes in-right {
@@ -74,18 +74,8 @@
     width: 200px;
   }
 }
-/* @media screen and (max-width: 999px) {
-  .CategoryList nav {
-  animation: in-right 500ms ease forwards;
-    
-  };
-  @keyframes in-right { 
-    from {
-      width: 60px;
-    }
-    to {
-      width: 160px;
-    }
-    
+@media screen and (max-width: 689px) {
+  .CategoryList .aside_nav {
+    display: none;
   }
-} */
+}

@@ -41,3 +41,14 @@
     max-width: 666px;
   }
 }
+@media screen and (max-width: 689px) {
+  .Layout {
+    max-width: 520px;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "aside aside"
+      "main main"
+      "footer footer";
+  }
+}

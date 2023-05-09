@@ -16,11 +16,15 @@
   box-shadow: 1px 1px 10px #ffba20;
   border-radius: 10px;
   padding-bottom: 10px;
-  background-color: #133B3F;
+  background-color: #133b3f;
 }
 .ProductList a {
   padding: 15px;
   text-decoration: none;
 }
-.ProductList A:first-child {
-padding: 0;}
+.ProductList a:first-child {
+  padding: 0;
+}
+.ProductList span {
+  color: #ffba20;
+}

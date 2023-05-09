@@ -27,3 +27,10 @@
     max-height: 240px;
   }
 }
+@media screen and (max-width: 999px) {
+  .Randomizer {
+    max-width: 210px;
+    max-height: 200px;
+    padding: 7px;
+  }
+}

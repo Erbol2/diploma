@@ -46,7 +46,7 @@
   position: absolute;
   background-color: #ffba20;
   min-height: 550px;
-  z-index: 1;
+  z-index: 2;
   margin: 0;
   border-radius: 30px;
   padding: 0;
@@ -74,3 +74,18 @@
     width: 200px;
   }
 }
+/* @media screen and (max-width: 999px) {
+  .CategoryList nav {
+  animation: in-right 500ms ease forwards;
+    
+  };
+  @keyframes in-right { 
+    from {
+      width: 60px;
+    }
+    to {
+      width: 160px;
+    }
+    
+  }
+} */

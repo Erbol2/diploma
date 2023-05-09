@@ -21,3 +21,9 @@
 .Randomizer img {
   width: 100%;
 }
+@media screen and (max-width: 1199px) {
+  .Randomizer {
+    max-width: 250px;
+    max-height: 240px;
+  }
+}

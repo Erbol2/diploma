@@ -26,3 +26,9 @@
 .Layout footer {
   grid-area: footer;
 }
+@media screen and (max-width: 1199px) {
+  .Layout {
+    max-width: 999px;
+  }
+  
+}

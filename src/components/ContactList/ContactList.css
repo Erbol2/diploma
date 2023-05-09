@@ -1,11 +1,14 @@
 .ContactList {
   display: flex;
 }
+.ContactList .content {
+  max-width: 50%;
+}
 .ContactList a i {
   margin: 5px;
 }
 .ContactList .img-block {
-  max-width: 450px;
+  max-width: 50%;
 }
 .ContactList .img-block img {
   max-width: 100%;

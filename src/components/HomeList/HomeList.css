@@ -5,7 +5,7 @@
   max-width: 610px;
   box-sizing: border-box;
   border-radius: 25px;
-  border: 2px solid #FFBA20;
+  border: 2px solid #ffba20;
 }
 .HomeList .slider_img {
   max-width: 100%;
@@ -14,7 +14,7 @@
   border-radius: 25px;
   width: 100%;
   position: relative;
-  vertical-align:bottom;
+  vertical-align: bottom;
 }
 .HomeList .HomeProduct .content {
   display: none;
@@ -48,4 +48,17 @@
     transform: translateY(-109px);
   }
 }
-
+@media screen and (max-width: 1199px) {
+  .HomeList .slider {
+    max-width: 490px;
+  }
+  .HomeList .HomeProduct .content {
+    padding: 40px 24px 45px;
+  }
+  .HomeList .HomeProduct .content a {
+    font-size: 20px;
+  }
+  .HomeList .HomeProduct .content span {
+    font-size: 20px;
+  }
+}

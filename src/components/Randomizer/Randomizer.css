@@ -2,7 +2,7 @@
   padding: 10px;
   background-color: #ffba20;
   max-width: 300px;
-  max-height: 260px ;
+  max-height: 260px;
   height: 100%;
   border-radius: 25px;
   width: 100%;
@@ -32,5 +32,10 @@
     max-width: 210px;
     max-height: 200px;
     padding: 7px;
+  }
+}
+@media screen and (max-width: 789px) {
+  .Randomizer {
+    margin: 10px auto;
   }
 }

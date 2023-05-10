@@ -20,11 +20,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 const auth = getAuth(app);
+export const storage = getStorage(app);
 
 export const categoryCollection = collection(db, 'categories');
 export const productsCollection = collection(db, 'products');
 export const ordersCollection = collection(db, 'orders');
-export const storage = getStorage(app);
 
 const provider = new GoogleAuthProvider();
 export const logIn = () => signInWithPopup(auth, provider);
@@ -59,7 +59,7 @@ export const onOrdersLoad = (callback) =>
   );
 
 export const uploadProductPhoto = async (file) => {
-  const storageRef = ref(storage, `proucts/${file.name}`);
+  const storageRef = ref(storage, `products/${file.name}`);
   await uploadBytes(storageRef, file);
 
   const url = await getDownloadURL(storageRef);

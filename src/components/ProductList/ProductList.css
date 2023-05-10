@@ -17,6 +17,7 @@
   border-radius: 10px;
   padding-bottom: 10px;
   background-color: #133b3f;
+  position: relative;
 }
 .ProductList a {
   padding: 15px;

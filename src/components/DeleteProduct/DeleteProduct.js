@@ -3,6 +3,7 @@ import { AppContext } from "../../App";
 import { deleteDoc, doc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { db, storage } from "../../firebase";
+import "./DeleteProduct.css";
 
 export default function DeleteProduct({ product }) {
   const { user } = useContext(AppContext);
@@ -29,7 +30,7 @@ export default function DeleteProduct({ product }) {
 
   return (
     <span className="DeleteProduct" onClick={onDeleteClick}>
-      <i className="fa-solid fa-xmark fa-lg " style={{ color: "#FFBA20" }}></i>
+      <i className="fa-solid fa-xmark fa-lg" style={{ color: "#FFBA20" }}></i>
     </span>
   );
 }

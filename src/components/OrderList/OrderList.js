@@ -14,14 +14,14 @@ export default function OrderList() {
       const product = products.find(product => product.id === productId);
 
       return (
-        <li>
+        <li key={product.id}>
           {product.name}: {product.price} $
         </li>
       );
     })
 
     return (
-      <ul className="Order">
+      <ul key={order.id} className="Order">
         <li>Name: {order.name}</li>
         <li>Phone: {order.phone}</li>
         <li>Address: {order.address}</li>
@@ -31,15 +31,15 @@ export default function OrderList() {
           </ol>
         </li>
         <p>Successfully
-          <i className="fa-solid fa-check" style={{margin: "10px"}}></i>
-      </p>
+          <i className="fa-solid fa-check" style={{ margin: "10px" }}></i>
+        </p>
       </ul >
     );
-})
+  })
 
-return (
-  <div className="OrderList">
-    {output}
-  </div>
-);
+  return (
+    <div className="OrderList">
+      {output}
+    </div>
+  );
 }

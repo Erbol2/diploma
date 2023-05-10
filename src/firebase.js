@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, onSnapshot } from 'firebase/firestore'
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth'
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,6 +24,7 @@ const auth = getAuth(app);
 export const categoryCollection = collection(db, 'categories');
 export const productsCollection = collection(db, 'products');
 export const ordersCollection = collection(db, 'orders');
+export const storage = getStorage(app);
 
 const provider = new GoogleAuthProvider();
 export const logIn = () => signInWithPopup(auth, provider);
@@ -37,7 +39,7 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
-  export const onProductsLoad = (callback) =>
+export const onProductsLoad = (callback) =>
   onSnapshot(productsCollection, (snapshot) =>
     callback(
       snapshot.docs.map((doc) => ({
@@ -46,7 +48,7 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
-  export const onOrdersLoad = (callback) =>
+export const onOrdersLoad = (callback) =>
   onSnapshot(ordersCollection, (snapshot) =>
     callback(
       snapshot.docs.map((doc) => ({
@@ -55,3 +57,12 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
+
+export const uploadProductPhoto = async (file) => {
+  const storageRef = ref(storage, `proucts/${file.name}`);
+  await uploadBytes(storageRef, file);
+
+  const url = await getDownloadURL(storageRef);
+  return url;
+
+}

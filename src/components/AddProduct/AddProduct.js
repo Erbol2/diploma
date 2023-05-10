@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../App";
 import { productsCollection, uploadProductPhoto } from "../../firebase";
 import { addDoc } from "firebase/firestore";
+import "./AddProduct.css"
 
 export default function AddProduct({ category }) {
   const { user } = useContext(AppContext);

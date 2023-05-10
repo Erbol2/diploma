@@ -28,7 +28,7 @@ export default function ContactList() {
             <i className="fa-brands fa-github fa-2xl"></i>
           </a>
           <a href="/">
-            <i class="fa-brands fa-linkedin fa-2xl"></i>
+            <i className="fa-brands fa-linkedin fa-2xl"></i>
           </a>
           <br />
           <br />

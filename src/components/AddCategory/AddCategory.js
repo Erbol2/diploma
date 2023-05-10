@@ -41,7 +41,7 @@ export default function AddCategory() {
         type="text"
         placeholder="Category name"
         value={category}
-        on onChange={onChangeCategory}
+        onChange={onChangeCategory}
       />
       <button onClick={onAddCategory}>+</button>
     </div>)

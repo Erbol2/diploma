@@ -14,14 +14,42 @@
 .Nav .NavItem a {
   text-decoration: none;
   padding: 25px 25px 10px 25px;
-  border-bottom: 3px solid #FFBA20;
+  border-bottom: 3px solid #ffba20;
   transition: 0.3s ease;
 }
 .Nav .NavItem a:hover {
   padding: 25px 25px 14px 25px;
-  border-color: #FFD984;
+  border-color: #ffd984;
 }
 .Nav .NavItem a:focus {
-  border-color: #FFd984;
+  border-color: #ffd984;
   padding-bottom: 14px;
+}
+.Nav .toogle_nav {
+  display: none;
+}
+.Nav .burger_menu {
+  display: none;
+}
+@media screen and (max-width: 689px) {
+  .Nav .navbar {
+    display: none;
+  }
+  .Nav .burger_menu:hover.toggle_nav  {
+    display: flex;
+    flex-direction: column;
+    background-color: #064d54;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .Nav .burger_menu {
+    display: block;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 45%;
+  }
 }

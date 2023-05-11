@@ -5,7 +5,7 @@ import "./Nav.css";
 export default function Nav() {
   return (
     <nav className="Nav">
-      <ul>
+      <ul className="navbar">
         <li className="NavItem">
           <NavLink to="/">Home</NavLink>
         </li>
@@ -16,6 +16,22 @@ export default function Nav() {
           <NavLink to="/contacts">Contacts</NavLink>
         </li>
       </ul>
-    </nav>
+      <div>
+        <button className="burger_menu">
+          <i className="fa-solid fa-bars fa-beat fa-xl"></i>
+        </button>
+        <ul className="toogle_nav">
+          <li className="NavItem">
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className="NavItem">
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li className="NavItem">
+            <NavLink to="/contacts">Contacts</NavLink>
+          </li>
+        </ul>
+      </div>
+    </nav >
   );
 }

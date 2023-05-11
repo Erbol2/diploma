@@ -6,8 +6,8 @@
   width: 250px;
   display: flex;
   flex-direction: column;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
   padding-bottom: 10px;
 }
 .ProductList .Product {

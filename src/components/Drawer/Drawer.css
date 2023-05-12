@@ -1,0 +1,57 @@
+.Drawer .content {
+  background-color: #133b3f;
+  color: #ffba20;
+  width: 260px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  transform: translateX(-300px);
+  transition: transform 0.3s;
+}
+.Drawer .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  display: none;
+}
+.open .backdrop {
+  display: block;
+}
+.open .content {
+  transform: translateX(0);
+}
+.Drawer .Logo {
+  margin: 10px;
+}
+.Drawer .Nav {
+  flex-direction: column;
+  background-color: #133b3f;
+  max-width: 110px;
+}
+.Drawer .Nav .navbar {
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.Drawer .Nav .navbar .NavItem {
+  width: 100%;
+}
+.Drawer .Nav .navbar .NavItem a {
+  width: 100%;
+  padding: 25px 100%;
+}
+@media (min-width: 689px) {
+  .Drawer .backdrop {
+    display: none;
+  }
+  .Drawer .content {
+    transform: translateX(-300px);
+  }
+}

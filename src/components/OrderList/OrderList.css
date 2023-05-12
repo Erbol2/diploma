@@ -1,8 +1,10 @@
+.OrderList {
+  max-width: 944px;
+}
 .OrderList .Order {
   list-style-type: none;
   border: 2px solid #ffba20;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 1px 1px 7px #ffba20 inset;
-  width: 100%;
 }

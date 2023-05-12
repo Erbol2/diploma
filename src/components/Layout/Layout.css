@@ -51,4 +51,7 @@
       "main main"
       "footer footer";
   }
+  .Layout header > .Nav {
+    display: none;
+  }
 }

@@ -6,17 +6,3 @@
 .CartLink a {
   text-decoration: none;
 }
-.CartLink i:hover {
-  animation: bounce 0.2s ease-in-out forwards ;
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}

@@ -9,6 +9,7 @@ export default function AddProduct({ category }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [picture, setPicture] = useState(null);
+  const [video, setVideo] = useState(null);
 
   if (!user || !user.isAdmin) {
     return null;
@@ -24,7 +25,9 @@ export default function AddProduct({ category }) {
     const file = event.target.files[0];
     setPicture(file);
   }
-
+  function onChangeVideo(event) {
+    setVideo(event.target.value);
+  }
   function onFormSubmit(event) {
     event.preventDefault();
 
@@ -40,6 +43,7 @@ export default function AddProduct({ category }) {
           name: name,
           price: Number(price),
           picture: pictureUrl,
+          video: video,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
@@ -47,6 +51,7 @@ export default function AddProduct({ category }) {
         setName("");
         setPrice(0);
         setPicture(null);
+        setVideo("")
       })
       .catch((error) => {
         console.log("Failed to add product:", error);
@@ -87,6 +92,14 @@ export default function AddProduct({ category }) {
             onChange={onChangePicture}
             required
           />
+        </label>
+        <label>
+          Video:
+          <input
+            type="text"
+            name="video"
+            onChange={onChangeVideo}
+            required />
         </label>
         <button type="submit">Submit</button>
       </form>

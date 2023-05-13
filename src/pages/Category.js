@@ -11,7 +11,7 @@ export default function Category() {
 
   const category = categories.find(
     (category) => category.slug === params.slug);
-
+    
   if (!category) {
     return <NotFound />
   }

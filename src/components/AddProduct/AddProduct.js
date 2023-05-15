@@ -9,8 +9,8 @@ export default function AddProduct({ category }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [picture, setPicture] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [video, setVideo] = useState(null);
-
   if (!user || !user.isAdmin) {
     return null;
   }
@@ -32,29 +32,32 @@ export default function AddProduct({ category }) {
     event.preventDefault();
 
     if (!picture) {
-      alert("Please upload an picture");
+      alert("Please upload an image");
       return;
     }
 
+    setIsSubmitting(true);
     uploadProductPhoto(picture)
       .then((pictureUrl) =>
         addDoc(productsCollection, {
           category: category.id,
           name: name,
-          price: Number(price),
-          picture: pictureUrl,
+          price: price,
           video: video,
+          picture: pictureUrl,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
       .then(() => {
         setName("");
-        setPrice(0);
+        setPrice("");
         setPicture(null);
-        setVideo("")
       })
       .catch((error) => {
         console.log("Failed to add product:", error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
   }
 
@@ -81,7 +84,6 @@ export default function AddProduct({ category }) {
             onChange={onChangePrice}
             min={0}
             required
-            step="any"
           />
         </label>
         <label>
@@ -101,7 +103,9 @@ export default function AddProduct({ category }) {
             onChange={onChangeVideo}
             required />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
       </form>
     </div>
   );

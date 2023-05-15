@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 import { useMatch } from "react-router"
 import { AppContext } from "../App"
 import NotFound from "./NotFound"
@@ -6,17 +6,24 @@ import NotFound from "./NotFound"
 export default function Product() {
   const { params } = useMatch("/products/:slug");
   const { products } = useContext(AppContext);
+  const videoEl = useRef(null);
 
   const product = products.find(product => product.slug === params.slug)
   if (!product) {
     return <NotFound />;
   }
-
   return (
     <div style={{ display: "flex" }} className="Product">
       <div>
         <h1>{product.name}</h1>
-        <video width="500" height="300" controls="controls">
+        <video
+          width="500"
+          height="300"
+          controls
+          muted
+          autoPlay={true}
+          loop
+          ref={videoEl}>
           <source src={product.video} type="video/mp4" />
         </video>
       </div>
@@ -24,6 +31,6 @@ export default function Product() {
         <img style={{ width: "250px", display: "flex" }} src={product.picture} alt={product.name} />
         <span style={{ fontSize: "24px" }}>{product.price} $</span>
       </div>
-    </div>
+    </div >
   )
 }

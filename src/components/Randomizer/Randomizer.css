@@ -8,12 +8,12 @@
   width: 100%;
   margin-left: auto;
   text-align: center;
+  cursor: pointer;
 }
 .Randomizer h2 {
   color: #064d54;
 }
 .Randomizer i {
-  cursor: pointer;
   color: #064d54;
   font-size: 40px;
   padding: 25px;

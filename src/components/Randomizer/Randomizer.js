@@ -14,9 +14,9 @@ export default function Randomizer() {
   };
 
   return (
-    <div className="Randomizer" >
+    <div className="Randomizer" onClick={handleProductSelected} >
       <ProductDisplay product={selectedProduct} />
-      <i className="fa-solid fa-dice fa-2xl" onClick={handleProductSelected}></i>
+      <i className="fa-solid fa-dice fa-2xl" ></i>
       <h2>Сlick on dice to randomly select a game</h2>
     </div>
   );

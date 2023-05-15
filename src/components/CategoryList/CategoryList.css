@@ -7,13 +7,10 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-top-right-radius: 35px;
-  border-top-left-radius: 35px;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
+  border-radius: 35px;
   font-family: inherit;
 }
-.CategoryList .aside_nav h3 {
+.CategoryList h3 {
   color: #064d54;
 }
 .CategoryList ul {
@@ -33,27 +30,29 @@
   color: #064d54;
 }
 .CategoryList .links:hover {
-  transform: translate(5px);
-  transition: all 300ms ease-in-out;
+  transform: translateX(5px);
+  transition: transform 300ms ease-in-out;
 }
 .CategoryList .aside_nav i {
   margin: 28px 20px;
   color: #064d54;
 }
+.CategoryList .aside_nav:hover {
+  animation: in-right 350ms linear 100ms forwards;
+}
 .CategoryList .aside_nav nav {
   text-align: center;
   display: none;
-  position: absolute;
   background-color: #ffba20;
   min-height: 550px;
   z-index: 2;
   margin: 0;
   border-radius: 30px;
-  padding: 0;
-  animation: in-right 500ms ease forwards;
+  width: 100%;
 }
 .CategoryList .aside_nav:hover nav {
   display: block;
+  position: absolute;
 }
 .CategoryList .aside_nav:hover i {
   display: none;
@@ -61,13 +60,14 @@
 .CategoryList .aside_nav h2 {
   color: #064d54;
   transform: rotate(-90deg);
-  margin-top: 225px;
-}
-.CategoryList .aside_nav:hover h2 {
-  display: none;
+  margin: 225px 0 0 -25px;
+  position: absolute;
 }
 .CategoryList .mini_nav {
   display: none;
+}
+.CategoryList .hovered {
+  animation: in-left 150ms linear forwards;
 }
 @keyframes in-right {
   from {
@@ -75,6 +75,14 @@
   }
   to {
     width: 200px;
+  }
+}
+@keyframes in-left {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 60px;
   }
 }
 @media screen and (max-width: 689px) {
@@ -110,7 +118,6 @@
     height: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-
   }
   .CategoryList .mini_nav:hover ul {
     display: inline-block;

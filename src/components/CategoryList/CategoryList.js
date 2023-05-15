@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../App";
 import "./CategoryList.css";
 import AddCategory from "../AddCategory/AddCategory";
@@ -15,10 +15,15 @@ export default function CategoryList() {
     </li>
   ));
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseLeave = () => {
+    setIsHovered(true);
+  };
 
   return (
     <div className="CategoryList">
-      <div className="aside_nav">
+      <div className={`aside_nav ${isHovered ? 'hovered' : ''}`} onMouseLeave={handleMouseLeave}>
         <i className="fa-solid fa-bars fa-beat fa-xl"></i>
         <h2>Categories</h2>
         <nav>

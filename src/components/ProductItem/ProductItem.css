@@ -2,7 +2,6 @@
   position: absolute;
   z-index: 5;
   top: 50px;
-  right: 710px;
 }
 .ProductItem .Product {
   display: flex;

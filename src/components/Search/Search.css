@@ -1,0 +1,21 @@
+.Search {
+  background-color: #faba34;
+  margin: auto;
+  border-radius: 15px;
+  position: relative;
+}
+.Search input {
+  background: none;
+  border: 0;
+  border-radius: 15px;
+  color: #064d54; 
+  height: 30px;
+}
+.Search .NoResults {
+  position: absolute;
+
+}
+.Search  .SearchResults {
+  position: absolute;
+  right:400px;
+}

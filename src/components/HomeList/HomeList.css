@@ -16,12 +16,14 @@
   position: relative;
   vertical-align: bottom;
 }
+.HomeList .HomeProduct {
+  position: relative;
+}
 .HomeList .HomeProduct .content {
-  display: none;
-  background-color: #ffb820bb;
   position: absolute;
-  width: 90%;
-  padding: 40px 30px;
+  display: block;
+  transition: 300ms;
+  min-width: 100%;
 }
 .HomeList .HomeProduct .content a {
   color: #064d54;
@@ -35,18 +37,13 @@
 }
 .HomeList .HomeProduct:hover .content {
   display: block;
-  animation: in-top 500ms ease forwards;
+  transform: translateY(-109px);
   backdrop-filter: blur(15px);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-}
-@keyframes in-top {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-109px);
-  }
+  background-color: #ffb820bb;
+  min-width: 90%;
+  padding: 40px 30px;
 }
 @media screen and (max-width: 1199px) {
   .HomeList .slider {

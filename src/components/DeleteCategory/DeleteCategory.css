@@ -1,0 +1,8 @@
+.DeleteCategory {
+  border: 1px solid #000;
+  height: 30px;
+  background: none;
+  color: #000;
+  padding: 5px;
+  cursor: pointer;
+}

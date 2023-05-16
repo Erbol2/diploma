@@ -25,6 +25,8 @@
 }
 .CategoryList .item {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 .CategoryList .item:hover {
   background-color: #ffcb58;
@@ -34,10 +36,9 @@
   display: block;
   padding: 10px;
   text-decoration: none;
-  color:#064d54;
+  color: #064d54;
   opacity: 0;
   transition: 0.3s;
-  
 }
 .CategoryList .aside_nav:hover .links {
   opacity: 1;
@@ -84,7 +85,6 @@
   position: absolute;
   transition: 0.5s;
   opacity: 1;
-
 }
 .CategoryList .aside_nav:hover h2 {
   opacity: 0;

@@ -1,9 +1,32 @@
 .Footer {
   margin-top: 10px;
-  border-top: 2px solid #ffba20;
-  padding: 10px 0;
+  border-top: 3px solid #ffba20;
+  padding: 20px 0; 
+}
+.Footer .top_footer {
+  display: flex;
+}
+.Footer h3 {
+  margin-top: 0;
+}
+.Footer .txtAbout {
+  width: 50% ;
+}
+.Footer .QuickLinks {
+  width: 25%;
+}
+.Footer .GoUp {
+  width: 25%;
+  text-align: center;
+}
+.Footer .icons {
+  text-align: end;
 }
 .Footer i {
   font-size: 34px;
-  margin: 0 3px;
+  margin: 0 10px;
+}
+.Footer .bottom_footer {
+  display: flex;
+  justify-content: space-between;
 }

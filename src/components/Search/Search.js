@@ -21,7 +21,6 @@ export default function Search() {
       setSearchResults(filteredProducts.slice(0, 5));
     }
   };
-
   return (
     <div className="Search">
       <input
@@ -30,6 +29,9 @@ export default function Search() {
         value={searchTerm}
         onChange={handleSearch}
       />
+      <span>
+        <i className="fa-solid fa-magnifying-glass searcher"></i>
+      </span>
       {searchTerm && searchResults.length === 0 && (
         <div className="NoResults">No results found</div>
       )}

@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   return (
     <div className="Footer">
       <div className="top_footer">
@@ -18,8 +21,10 @@ export default function Footer() {
           </ul>
         </div>
         <div className="GoUp">
-          <i class="fa-solid fa-arrow-up"></i>
-          <h3>GO UP</h3>
+          <Link href="#" onClick={scrollToTop}>
+            <i class="fa-solid fa-arrow-up"></i>
+            <h3>GO UP</h3>
+          </Link>
         </div>
       </div>
 

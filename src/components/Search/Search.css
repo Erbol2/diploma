@@ -3,6 +3,8 @@
   margin: auto 50px;
   border-radius: 15px;
   position: relative;
+  max-height: 30px;
+  white-space: nowrap;
 }
 .Search input {
   background: none;
@@ -23,5 +25,5 @@
 }
 .Search .searcher {
   color: #064d54;
-  margin:8px;
+  margin: 8px;
 }

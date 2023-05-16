@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useEffect, useContext, useState, useRef } from "react";
 import { AppContext } from "../../App";
 import ProductItem from "../ProductItem/ProductItem";
 import "./Search.css";
@@ -7,6 +7,7 @@ export default function Search() {
   const { products } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const searchRef = useRef(null);
 
   const handleSearch = (event) => {
     const value = event.target.value;
@@ -21,8 +22,28 @@ export default function Search() {
       setSearchResults(filteredProducts.slice(0, 5));
     }
   };
+
+  const handleClickOutside = (event) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setSearchTerm("");
+      setSearchResults([]);
+    }
+  };
+
+  const handleLinkClick = () => {
+    setSearchTerm("");
+    setSearchResults([]);
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="Search">
+    <div className="Search" ref={searchRef}>
       <input
         type="text"
         placeholder="Search for a game"
@@ -37,7 +58,11 @@ export default function Search() {
       )}
       <div className="SearchResults">
         {searchResults.map((product) => (
-          <ProductItem key={product.id} product={product} />
+          <ProductItem
+            key={product.id}
+            product={product}
+            onLinkClick={handleLinkClick}
+          />
         ))}
       </div>
     </div>

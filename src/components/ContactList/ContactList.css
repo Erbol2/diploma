@@ -6,10 +6,47 @@
 }
 .ContactList a i {
   margin: 5px;
+  font-size: 33px;
 }
 .ContactList .img-block {
   max-width: 50%;
 }
 .ContactList .img-block img {
   max-width: 100%;
+}
+
+.ContactList .content .instagram {
+  transition: 0.3s;
+  background: transparent;
+  color: #ffba20;
+}
+.ContactList .content .instagram:hover {
+  transform: scale(1.1);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  transition: all 1.8s ease 0.9s in;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ContactList .content .linkedin {
+  transition: 0.3s;
+}
+.ContactList .content .linkedin:hover {
+  color: #0a66c2;
+  transform: scale(1.1);
+}
+.ContactList .content .github {
+  transition: 0.3s;
+  border-radius: 55%;
+}
+.ContactList .content .github:hover {
+  color: white;
+  background-color: black;
+  transform: scale(1.1);
 }

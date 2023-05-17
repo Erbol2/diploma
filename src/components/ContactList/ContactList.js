@@ -22,13 +22,13 @@ export default function ContactList() {
           <br />
           <br />
           <a href="/">
-            <i className="fa-brands fa-instagram fa-2xl"></i>
+            <i className="fa-brands fa-instagram instagram"></i>
           </a>
           <a href="/">
-            <i className="fa-brands fa-github fa-2xl"></i>
+            <i className="fa-brands fa-github github"></i>
           </a>
           <a href="/">
-            <i className="fa-brands fa-linkedin fa-2xl"></i>
+            <i className="fa-brands fa-linkedin linkedin"></i>
           </a>
           <br />
           <br />

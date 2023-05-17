@@ -118,8 +118,12 @@
     margin: 0;
     left: 0;
   }
+  .CategoryList .mini_nav ul .item .links {
+    opacity: 1;
+  }
   .CategoryList .mini_nav h3 {
     color: #064d54;
+    opacity: 1;
   }
   .CategoryList .mini_nav:hover {
     height: 100%;
@@ -131,5 +135,6 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     padding: 0 0 25px;
+    color: #064d54;
   }
 }

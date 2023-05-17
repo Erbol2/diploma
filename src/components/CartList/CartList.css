@@ -1,5 +1,6 @@
 .CartList .CartItem {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
   align-items: center;
   background-color: #133b3f;
   border: 2px solid #ffba20;
@@ -20,11 +21,11 @@
 .CartList .CartItem span.price {
   color: #ffba20;
   font-size: 25px;
-  margin: 0 auto;
+  
 }
 .CartList .CartItem span.remove {
   cursor: pointer;
-  margin: 20px;
+  margin: 0 15px 0 auto;
   font-size: 25px;
 }
 @media screen and (max-width: 789px) {

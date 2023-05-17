@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+  }
   return (
     <div className="Footer">
       <div className="top_footer">
@@ -32,13 +32,13 @@ export default function Footer() {
         <p>Copyright © 2023, All Right Reserved Erbol</p>
         <div className="icons">
           <a href="/">
-            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram instagram"></i>
           </a>
           <a href="/">
-            <i className="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-linkedin linkedin"></i>
           </a>
           <a href="/">
-            <i className="fa-brands fa-github"></i>
+            <i className="fa-brands fa-github github"></i>
           </a>
         </div></div>
     </div>

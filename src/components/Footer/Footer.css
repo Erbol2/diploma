@@ -1,7 +1,7 @@
 .Footer {
   margin-top: 10px;
   border-top: 3px solid #ffba20;
-  padding: 20px 0; 
+  padding: 20px 0;
 }
 .Footer .top_footer {
   display: flex;
@@ -10,7 +10,7 @@
   margin-top: 0;
 }
 .Footer .txtAbout {
-  width: 50% ;
+  width: 50%;
 }
 .Footer .QuickLinks {
   width: 25%;
@@ -29,4 +29,39 @@
 .Footer .bottom_footer {
   display: flex;
   justify-content: space-between;
+}
+.Footer .icons .instagram {
+  transition: 0.3s;
+  background: transparent;
+  color: #ffba20;
+}
+.Footer .icons .instagram:hover {
+  transform: scale(1.1);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  transition: all 1.8s ease 0.9s in;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Footer .icons .linkedin {
+  transition: 0.3s;
+}
+.Footer .icons .linkedin:hover {
+  color: #0a66c2;
+  transform: scale(1.1);
+}
+.Footer .icons .github {
+  transition: 0.3s;
+  border-radius: 55%;
+}
+.Footer .icons .github:hover {
+  color: white;
+  background-color: black;
+  transform: scale(1.1);
 }

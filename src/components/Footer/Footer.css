@@ -81,3 +81,22 @@
   background-color: black;
   transform: scale(1.1);
 }
+@media screen and (max-width: 789px) {
+  .Footer .top_footer {
+    flex-direction: column;
+  }
+  .Footer .QuickLinks {
+    width: 100%;
+  }
+  .Footer .txtAbout {
+    width: 100%;
+    text-align: center;
+  }
+  .Footer .GoUp {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 689px) {
+  
+}

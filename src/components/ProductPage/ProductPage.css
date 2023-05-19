@@ -1,0 +1,39 @@
+.ProductPage {
+  display: flex;
+}
+.ProductPage .video_block {
+  max-width: 600px;
+}
+.ProductPage .content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+.ProductPage .content .addToCart {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+}
+.ProductPage .content .addToCart button.addBtn {
+  right: -270px;
+}
+.ProductPage .content .addToCart span {
+  position: absolute;
+  color: #ffba20;
+  font-size: 26px;
+  text-align: center;
+  width: 50%;
+  left: -10px;
+  bottom: -25px;
+}
+.ProductPage .content .img_block {
+  max-width: 280px;
+  margin: 83px 0 10px;
+}
+.ProductPage .content .img_block img {
+  width: 100%;
+}
+.ProductPage .content .description {
+  width: 280px;
+  margin: 0;
+}

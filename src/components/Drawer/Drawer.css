@@ -47,7 +47,7 @@
   width: 100%;
   padding: 25px 100%;
 }
-@media (min-width: 689px) {
+@media (min-width: 789px) {
   .Drawer .backdrop {
     display: none;
   }

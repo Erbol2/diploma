@@ -40,6 +40,9 @@
   .Layout {
     max-width: 666px;
   }
+  .Layout header > .Nav {
+    display: none;
+  }
 }
 @media screen and (max-width: 689px) {
   .Layout {
@@ -50,8 +53,5 @@
       "aside aside"
       "main main"
       "footer footer";
-  }
-  .Layout header > .Nav {
-    display: none;
   }
 }

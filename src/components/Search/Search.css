@@ -32,3 +32,8 @@
 .Search input::placeholder {
   color: #064d54;
 }
+@media screen and (max-width: 789px) {
+  .Search {
+    display: none;
+  }
+}

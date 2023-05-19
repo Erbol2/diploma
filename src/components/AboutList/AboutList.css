@@ -10,3 +10,12 @@
 .AboutList .aboutImg img {
   width: 100%;
 }
+@media screen and (max-width: 999px) {
+  .AboutList .aboutImg {
+    display: none;
+  }
+  .AboutList .aboutContent{
+    max-width: 100%;
+    text-align: center;
+  }
+}

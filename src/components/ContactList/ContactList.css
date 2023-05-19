@@ -50,3 +50,12 @@
   background-color: black;
   transform: scale(1.1);
 }
+@media screen and (max-width: 999px) {
+  .ContactList .img-block {
+    display: none;
+  }
+  .ContactList .content {
+    max-width: 100%;
+    text-align: center;
+  }
+}

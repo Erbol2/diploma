@@ -31,9 +31,34 @@
   margin: 83px 0 10px;
 }
 .ProductPage .content .img_block img {
-  width: 100%;
+  max-width: 100%;
 }
 .ProductPage .content .description {
-  width: 280px;
+  max-width: 280px;
   margin: 0;
+}
+@media screen and (max-width: 1199px) {
+  .ProductPage .content {
+    margin-left: 10px;
+  }
+  .ProductPage .content .addToCart span {
+    font-size: 20px;
+    left: -30px;
+  }
+  .ProductPage .content .addToCart button.addBtn {
+    right: -240px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .ProductPage {
+    flex-direction: column;
+  }
+  .ProductPage .content {
+    margin: -30px auto 100px;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 789px) {
+}
+@media screen and (max-width: 689px) {
 }

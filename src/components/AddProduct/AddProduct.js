@@ -11,6 +11,7 @@ export default function AddProduct({ category }) {
   const [picture, setPicture] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [video, setVideo] = useState(null);
+  const [description, setDescription] = useState(null);
   if (!user || !user.isAdmin) {
     return null;
   }
@@ -28,6 +29,9 @@ export default function AddProduct({ category }) {
   function onChangeVideo(event) {
     setVideo(event.target.value);
   }
+  function onChangeDescription(event) {
+    setDescription(event.target.value);
+  }
   function onFormSubmit(event) {
     event.preventDefault();
 
@@ -44,6 +48,7 @@ export default function AddProduct({ category }) {
           name: name,
           price: price,
           video: video,
+          description: description,
           picture: pictureUrl,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
@@ -102,6 +107,14 @@ export default function AddProduct({ category }) {
             name="video"
             onChange={onChangeVideo}
             required />
+        </label>
+        <label>
+          Description: <input
+            type="text"
+            name="description"
+            onChange={onChangeDescription}
+            required
+          />
         </label>
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}

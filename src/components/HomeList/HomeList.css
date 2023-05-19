@@ -93,7 +93,7 @@
   .HomeList .slider {
     max-width: 490px;
   }
-  .HomeList .HomeProduct .content {
+  .HomeList .top_home .HomeProduct  .content {
     padding: 40px 24px 45px;
   }
   .HomeList .HomeProduct .content a {
@@ -107,7 +107,7 @@
   .HomeList .slider {
     max-width: 385px;
   }
-  .HomeList .HomeProduct .content {
+  .HomeList .top_home .HomeProduct .content {
     padding: 30px 19px;
     margin-top: 30px;
   }
@@ -125,7 +125,7 @@
   .HomeList .slider {
     max-width: 532px;
   }
-  .HomeList .HomeProduct .content {
+  .HomeList .top_home .HomeProduct .content {
     padding: 30px 27px;
     margin-top: 30px;
   }
@@ -134,7 +134,7 @@
   .HomeList .slider {
     max-width: 520px;
   }
-  .HomeList .HomeProduct .content {
+  .HomeList .top_home .HomeProduct .content {
     padding: 30px 27px;
     margin-top: 30px;
   }

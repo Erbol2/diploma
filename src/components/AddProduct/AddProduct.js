@@ -88,6 +88,7 @@ export default function AddProduct({ category }) {
             name="price"
             onChange={onChangePrice}
             min={0}
+            step="any"
             required
           />
         </label>

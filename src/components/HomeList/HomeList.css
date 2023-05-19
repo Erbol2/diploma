@@ -93,7 +93,7 @@
   .HomeList .slider {
     max-width: 490px;
   }
-  .HomeList .top_home .HomeProduct  .content {
+  .HomeList .top_home .HomeProduct .content {
     padding: 40px 24px 45px;
   }
   .HomeList .HomeProduct .content a {
@@ -137,5 +137,20 @@
   .HomeList .top_home .HomeProduct .content {
     padding: 30px 27px;
     margin-top: 30px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .HomeList .slider {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .HomeList .slider {
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .HomeList .slider {
+    max-width: 370px;
   }
 }

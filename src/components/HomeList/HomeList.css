@@ -1,11 +1,17 @@
 .HomeList {
   display: flex;
+  flex-direction: column;
+}
+.HomeList .top_home {
+  display: flex;
+  flex-wrap: wrap;
 }
 .HomeList .slider {
   max-width: 610px;
   box-sizing: border-box;
   border-radius: 25px;
   border: 2px solid #ffba20;
+  vertical-align: bottom;
 }
 .HomeList .slider_img {
   width: 100%;
@@ -45,6 +51,44 @@
   min-width: 90%;
   padding: 40px 30px;
 }
+.HomeList .bottom_home {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+.HomeList .bottom_home .Product {
+  display: flex;
+  margin: 0 auto 30px;
+  border: 3px solid #ffba20;
+  box-shadow: 1px 1px 10px #ffba20;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  background-color: #133b3f;
+  position: relative;
+  max-width: 250px;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+.HomeList .bottom_home .Product img {
+  width: 100%;
+  border-radius: 0;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  padding-bottom: 10px;
+}
+.HomeList .bottom_home a {
+  text-decoration: none;
+  padding-left: 10px;
+}
+.HomeList .bottom_home a:first-child {
+  padding: 0;
+}
+.HomeList .bottom_home span {
+  padding: 0 25px 10px;
+  color: #ffba20;
+  margin-left: auto;
+}
+
 @media screen and (max-width: 1199px) {
   .HomeList .slider {
     max-width: 490px;

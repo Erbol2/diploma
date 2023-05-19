@@ -12,7 +12,9 @@ export default function OrderList() {
   const output = orders.map(order => {
     const cartOutput = Object.keys(order.cart).map(productId => {
       const product = products.find(product => product.id === productId);
-
+      if (!product) {
+        return "Product not found";
+      }
       return (
         <li key={product.id}>
           {product.name}: {product.price} $

@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
         <div className="GoUp">
           <Link href="#" onClick={scrollToTop}>
-            <i class="fa-solid fa-arrow-up"></i>
+            <i className="fa-solid fa-arrow-up"></i>
             <h3>GO UP</h3>
           </Link>
         </div>

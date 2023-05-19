@@ -14,10 +14,26 @@
 }
 .Footer .QuickLinks {
   width: 25%;
+  text-align: center;
+}
+.Footer .QuickLinks ul {
+  padding: 0;
+}
+.Footer .QuickLinks ul li {
+  list-style-type: none;
+}
+.Footer .QuickLinks ul li a {
+  text-decoration: none;
+}
+.Footer .QuickLinks ul li a:hover {
+  color: #ffb820b7;
 }
 .Footer .GoUp {
   width: 25%;
   text-align: center;
+}
+.Footer .GoUp a {
+  text-decoration: none;
 }
 .Footer .icons {
   text-align: end;

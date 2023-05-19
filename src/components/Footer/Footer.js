@@ -16,8 +16,8 @@ export default function Footer() {
         <div className="QuickLinks">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link>About</Link></li>
-            <li><Link>Contacts</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contacts">Contacts</Link></li>
           </ul>
         </div>
         <div className="GoUp">
@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
 
       <div className="bottom_footer">
-        <p>Copyright © 2023, All Right Reserved Erbol</p>
+        <p style={{opacity: "0.3"}}>Copyright © 2023, All Right Reserved Erbol</p>
         <div className="icons">
           <a href="/">
             <i className="fa-brands fa-instagram instagram"></i>

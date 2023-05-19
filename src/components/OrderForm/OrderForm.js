@@ -38,12 +38,12 @@ export default function OrderForm() {
       <h2>Create an order</h2>
       <label>
         Name:
-        <i className="fa-solid fa-user" style={{ margin: " 0 2px 0 10px" }}></i>
+        <i className="fa-solid fa-user"></i>
         <input type="text" name="name" required placeholder="First Name" />
       </label>
       <label>
         Phohe:
-        <i className="fa-solid fa-phone" style={{ margin: "0 2px 0 10px" }}></i>
+        <i className="fa-solid fa-phone"></i>
         <input type="tel" name="phone" required placeholder="+996(707) 707 707" />
       </label>
       <button>Submit</button>

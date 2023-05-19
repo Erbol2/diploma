@@ -2,15 +2,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #ffba20;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .OrderForm button {
   max-width: 200px;
   padding: 5px 14px;
   margin: 15px;
+  border-radius: 10px;
   background-color: transparent;
   border: 2px solid #ffba20;
   cursor: pointer;
 }
 .OrderForm input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  background: none;
   border: 2px solid #ffba20;
+}
+.OrderForm input::placeholder {
+  color: #ffba20;
+}
+.OrderForm label i {
+  margin: 0 2px 0 5px;
+}
+.OrderForm label i.fa-phone {
+  margin-right: 0;
 }

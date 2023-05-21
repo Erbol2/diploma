@@ -6,9 +6,11 @@ import AddCategory from "../AddCategory/AddCategory";
 import DeleteCategory from "../DeleteCategory/DeleteCategory";
 
 export default function CategoryList() {
-  const { categories } = useContext(AppContext)
+  const { categories } = useContext(AppContext);
 
-  const output = categories.map((category) => (
+  const sortedCategories = [...categories].sort((a, b) => a.name.localeCompare(b.name));
+
+  const output = sortedCategories.map((category) => (
     <li className="item" key={category.id}>
       <NavLink className="links" to={"/categories/" + category.slug}>{category.name}</NavLink>
       <DeleteCategory category={category} />
@@ -38,5 +40,4 @@ export default function CategoryList() {
       </div>
     </div>
   );
-
 }

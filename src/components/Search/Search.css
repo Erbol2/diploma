@@ -24,6 +24,7 @@
   position: absolute;
   right: 400px;
   top: 0;
+  z-index: 99;
 }
 .Search .searcher {
   color: #064d54;
@@ -34,6 +35,10 @@
 }
 @media screen and (max-width: 789px) {
   .Search {
-    display: none;
+    width: 200px;
+    margin: 15px 30px;
+  }
+  .Search .SearchResults {
+   right: -25px;
   }
 }

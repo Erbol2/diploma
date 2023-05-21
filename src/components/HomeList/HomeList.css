@@ -14,11 +14,11 @@
   vertical-align: bottom;
 }
 .HomeList .slider_img {
-  width: 100%;
+  max-width: 100%;
 }
 .HomeList img {
   border-radius: 25px;
-  width: 100%;
+  max-width: 100%;
   position: relative;
   vertical-align: bottom;
 }
@@ -133,6 +133,9 @@
 @media screen and (max-width: 689px) {
   .HomeList .slider {
     max-width: 520px;
+  }
+  .HomeList .top_home .slider {
+    margin: 0 auto;
   }
   .HomeList .top_home .HomeProduct .content {
     padding: 30px 27px;

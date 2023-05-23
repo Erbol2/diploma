@@ -6,7 +6,20 @@ import arrow from "../../assets/arrow.png";
 
 export default function Roulette() {
   const { products } = useContext(AppContext);
+  var list_block = document.querySelector('.list');
+  var lists = document.querySelectorAll('.list > li');
 
+  function onClickScroll() {
+    var random = Math.floor(Math.random() * 9);
+    list_block.style.left = -random * 100 + 'px';
+  
+    setTimeout(function () {
+      random++;
+      lists[random].classList.add("la-big");
+      lists[random].style.color = 'white';
+    }, 5000);
+  }
+  
   const output = products.map((product) => (
     <div key={product.id} className="Product">
       <NavLink to={"/products/" + product.slug}>
@@ -43,7 +56,7 @@ export default function Roulette() {
         </div>
       </div>
       <div className="btn-wrap">
-        <button type="button" className="btn button" >
+        <button type="button" className="btn button" onClick={onClickScroll} >
           <span>Get the game <br /> for $9.99</span>
         </button>
       </div>

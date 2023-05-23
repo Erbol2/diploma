@@ -57,7 +57,6 @@ export default function Roulette() {
 
         x = selfRandom(16, 34);
 
-        // Exclude 7, 10, 14
         if (x === 24 || x === 27 || x === 31) {
           x++;
         }
@@ -77,20 +76,16 @@ export default function Roulette() {
         }, 4000);
 
         setTimeout(function () {
-          $('.list li:eq(' + x + ')').addClass('li-win');
-          $('.arrow-bl').css('opacity', '0');
-          $('.arrow-gr').css('opacity', '1');
-          $('.items').addClass('items-shadow');
-          $('.card_num').val($('.li-win').attr('data-card'));
+          $('.list li:eq(' + x + ')').addClass('li-big');
+          $('.card_num').val($('.li-big').attr('data-card'));
         }, 4300);
       }, 300);
     });
 
-    // Return a cleanup function to remove the event listener
     return () => {
       $(window).off('load resize', windowSize);
     };
-  }, []); // Empty dependency array to run the effect only once
+  }, []);
 
   const output = products.map((product) => (
     <div key={product.id} className="Product">
@@ -123,6 +118,17 @@ export default function Roulette() {
               <li data-card="12">{output[12]}</li>
               <li data-card="13">{output[13]}</li>
               <li data-card="14">{output[14]}</li>
+              <li data-card="4">{output[15]}</li>
+              <li data-card="5" >{output[16]}</li>
+              <li data-card="6">{output[17]}</li>
+              <li data-card="7">{output[18]}</li>
+              <li data-card="8">{output[19]}</li>
+              <li data-card="9">{output[20]}</li>
+              <li data-card="10">{output[21]}</li>
+              <li data-card="11">{output[22]}</li>
+              <li data-card="12">{output[23]}</li>
+              <li data-card="13">{output[24]}</li>
+              <li data-card="14">{output[25]}</li>
             </ul>
           </div>
         </div>

@@ -1,0 +1,77 @@
+button {
+  display: block;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+li {
+  list-style: none;
+}
+.Roulette .arrow {
+  max-width: 100px;
+  margin: 150px auto;
+}
+.Roulette .arrow .arrow-bl {
+  max-width: 100px;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 110px;
+  z-index: 2;
+}
+.btn {
+  background: #ffba20;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 320px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 25px;
+  margin: 100px auto;
+}
+
+.items.wraper-shadow {
+  opacity: 0;
+}
+.wraper {
+  border: 2px solid #ffba20;
+  position: relative;
+  margin: auto;
+  width: 944px;
+  overflow-x: hidden;
+  margin: -58px 0;
+}
+.window {
+  position: relative;
+  width: 25000px;
+  height: 150px;
+  right: 0px;
+}
+.list {
+  position: relative;
+  display: flex;
+  padding: 0;
+}
+.list li {
+  padding: 22px 10px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.list li img {
+  width: 100%;
+  height: 86px;
+  box-shadow: inset 0px 4px 20px #373741, 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.list .li-big {
+  padding: 0 10px;
+}
+.list .li-big img {
+  width: 100%;
+  height: 130px;
+}

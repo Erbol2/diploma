@@ -18,6 +18,7 @@ export default function Footer() {
           <ul>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contacts">Contacts</Link></li>
+            <li><Link to="/orders">Orders</Link></li>
           </ul>
         </div>
         <div className="GoUp">

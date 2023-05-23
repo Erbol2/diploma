@@ -63,15 +63,18 @@ li {
   border-radius: 5px;
 }
 .list li img {
-  width: 100%;
-  height: 86px;
+  width: 137px;
   box-shadow: inset 0px 4px 20px #373741, 0px 6px 10px rgba(0, 0, 0, 0.25);
 }
-
 .list .li-big {
-  padding: 0 10px;
+  padding: 10px;
 }
 .list .li-big img {
-  width: 100%;
-  height: 130px;
+  width: 171px;
+}
+.list .li-win {
+  padding: 10px;
+}
+.list .li-win img {
+  width: 171px;
 }

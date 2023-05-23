@@ -1,25 +1,97 @@
-import { useContext } from "react";
-import "./Roulette.css";
-import { AppContext } from "../../App";
-import { NavLink } from "react-router-dom";
-import arrow from "../../assets/arrow.png";
+import { useEffect, useContext } from 'react';
+import './Roulette.css';
+import { AppContext } from '../../App';
+import { NavLink } from 'react-router-dom';
+import arrow from '../../assets/arrow.png';
+import $ from 'jquery';
 
 export default function Roulette() {
   const { products } = useContext(AppContext);
-  var list_block = document.querySelector('.list');
-  var lists = document.querySelectorAll('.list > li');
 
-  function onClickScroll() {
-    var random = Math.floor(Math.random() * 9);
-    list_block.style.left = -random * 100 + 'px';
-  
-    setTimeout(function () {
-      random++;
-      lists[random].classList.add("la-big");
-      lists[random].style.color = 'white';
-    }, 5000);
-  }
-  
+  useEffect(() => {
+    function windowSize() {
+      let windowW = $(window).width();
+      if (windowW > 1700) {
+        $('.window').animate({
+          right: 0
+        }, 0);
+      } else if (windowW <= 1700 && windowW > 1330) {
+        $('.window').animate({
+          right: 184
+        }, 0);
+      } else if (windowW <= 1330 && windowW > 990) {
+        $('.window').animate({
+          right: 364
+        }, 0);
+      } else if (windowW <= 990 && windowW > 780) {
+        $('.window').animate({
+          right: 542
+        }, 0);
+      } else if (windowW <= 780 && windowW > 615) {
+        $('.window').animate({
+          right: 515
+        }, 0);
+      } else {
+        $('.window').animate({
+          right: 635
+        }, 0);
+      }
+    }
+
+    $(window).on('load resize', windowSize);
+
+    for (let i = 0; i < 1; i++) {
+      $('.list li').clone().appendTo('.list');
+    }
+
+    $('.button').click(function () {
+      $('.li-big').removeClass('li-big');
+      $(this).prop('disabled', true);
+
+      let x;
+
+      setTimeout(function () {
+        function selfRandom(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        x = selfRandom(16, 34);
+
+        // Exclude 7, 10, 14
+        if (x === 24 || x === 27 || x === 31) {
+          x++;
+        }
+
+        let padding = 108;
+        let itemW = 181;
+
+        if ($(window).width() < 781) {
+          padding = 104;
+          itemW = 175;
+        }
+
+        let wrappW = $('.wraper').width() / 2;
+
+        $('.window').animate({
+          right: x * itemW + padding - wrappW
+        }, 4000);
+
+        setTimeout(function () {
+          $('.list li:eq(' + x + ')').addClass('li-win');
+          $('.arrow-bl').css('opacity', '0');
+          $('.arrow-gr').css('opacity', '1');
+          $('.items').addClass('items-shadow');
+          $('.card_num').val($('.li-win').attr('data-card'));
+        }, 4300);
+      }, 300);
+    });
+
+    // Return a cleanup function to remove the event listener
+    return () => {
+      $(window).off('load resize', windowSize);
+    };
+  }, []); // Empty dependency array to run the effect only once
+
   const output = products.map((product) => (
     <div key={product.id} className="Product">
       <NavLink to={"/products/" + product.slug}>
@@ -56,7 +128,7 @@ export default function Roulette() {
         </div>
       </div>
       <div className="btn-wrap">
-        <button type="button" className="btn button" onClick={onClickScroll} >
+        <button type="button" className="btn button">
           <span>Get the game <br /> for $9.99</span>
         </button>
       </div>

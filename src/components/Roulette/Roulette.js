@@ -53,11 +53,11 @@ export default function Roulette() {
 
   useEffect(() => {
     const windowSizes = {
-      1900: 0,
-      1430: 64,
-      1170: 44,
-      960: 522,
-      695: 595,
+      1600: 0,
+      1230: 364,
+      890: 442,
+      680: 415,
+      515: 0,
     };
 
     function windowSize() {

@@ -15,7 +15,7 @@ code {
   color: #ffba20;
 }
 * a {
-    outline: none;
+    outline-color: #ffba20;
 }
 @media screen and (max-width: 689px) {
   body h1 {

@@ -17,15 +17,15 @@ export default function CategoryList() {
     </li>
   ));
 
-  const [isHovered, setIsHovered] = useState(false);
+  const [isMiniNavVisible, setIsMiniNavVisible] = useState(false);
 
-  const handleMouseLeave = () => {
-    setIsHovered(true);
+  const handleMiniNavClick = () => {
+    setIsMiniNavVisible(!isMiniNavVisible);
   };
 
   return (
     <div className="CategoryList">
-      <div className={`aside_nav ${isHovered ? 'hovered' : ''}`} onMouseLeave={handleMouseLeave}>
+      <div className={`aside_nav ${isMiniNavVisible ? 'show' : ''}`}>
         <i className="fa-solid fa-bars fa-beat fa-xl"></i>
         <h2>Categories</h2>
         <nav>
@@ -34,7 +34,7 @@ export default function CategoryList() {
           <AddCategory />
         </nav>
       </div>
-      <div className="mini_nav">
+      <div className={`mini_nav ${isMiniNavVisible ? 'show' : ''}`} onClick={handleMiniNavClick}>
         <h3>Categories</h3>
         <ul>{output}</ul>
       </div>

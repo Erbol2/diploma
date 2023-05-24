@@ -112,6 +112,7 @@
     display: none;
   }
   .CategoryList .mini_nav {
+    cursor: pointer;
     display: inline-block;
     background-color: #ffba20;
     width: 100%;
@@ -120,6 +121,7 @@
     z-index: 99;
     left: 0;
   }
+  
   .CategoryList .mini_nav ul {
     position: absolute;
     display: none;
@@ -130,23 +132,28 @@
     left: 0;
     opacity: 1;
   }
+  
   .CategoryList .mini_nav ul .item .links {
     opacity: 1;
   }
+  
   .CategoryList .mini_nav h3 {
     color: #064d54;
     opacity: 1;
   }
-  .CategoryList .mini_nav:hover {
+  
+  .CategoryList .mini_nav.show  {
     height: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .CategoryList .mini_nav:hover ul {
+  
+  .CategoryList .mini_nav.show ul {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     padding: 0 0 25px;
     color: #064d54;
     display: block;
   }
+  
 }

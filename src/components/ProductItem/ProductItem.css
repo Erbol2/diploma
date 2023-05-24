@@ -53,7 +53,7 @@
 .ProductItem .Product .content span {
   color: #ffba20;
 }
-@media screen and (max-width: 789px) {
+@media screen and (max-width: 999px) {
   .ProductItem .Product .content {
     max-height: 20px;
     position: relative;

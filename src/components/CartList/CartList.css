@@ -21,6 +21,7 @@
 .CartList .CartItem span.price {
   color: #ffba20;
   font-size: 25px;
+  white-space: nowrap;
 }
 .CartList .CartItem span.remove {
   cursor: pointer;

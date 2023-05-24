@@ -91,8 +91,19 @@ li {
 }
 @media screen and (max-width: 789px) {
   .wraper {
-    max-width: 799px;
+    max-width: 530px;
   }
 }
 @media screen and (max-width: 689px) {
+  .wraper {
+    max-width: 530px;
+  }
+  .Roulette .arrow .arrow-bl {
+    max-width: 100px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 150px;
+    z-index: 2;
+  }
+
   }

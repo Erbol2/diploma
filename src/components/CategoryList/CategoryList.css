@@ -118,7 +118,7 @@
     position: absolute;
     display: none;
     background-color: #ffba20;
-    z-index: 2;
+    z-index: 99;
     width: 100%;
     margin: 0;
     left: 0;

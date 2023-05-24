@@ -15,3 +15,8 @@ code {
 * {
   color: #FFBA20;
 }
+@media screen and (max-width: 689px){
+  body h1 {
+    text-align: center;
+  }
+}

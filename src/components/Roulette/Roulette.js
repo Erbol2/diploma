@@ -4,7 +4,7 @@ import arrow from '../../assets/arrow.png';
 import { AppContext } from '../../App';
 import $ from 'jquery';
 import "./Roulette.css";
-import audioFile from '../../assets/wheel.wav';
+import audioFile from '../../assets/wheel.mp3';
 
 export default function Roulette() {
   const { products } = useContext(AppContext);

@@ -33,12 +33,17 @@
 .Search input::placeholder {
   color: #064d54;
 }
+@media screen and (max-width: 1199px) {
+  .Search {
+    margin: 20px;
+  }
+}
 @media screen and (max-width: 999px) {
   .Search {
     width: 200px;
     margin: 15px 30px;
   }
   .Search .SearchResults {
-   right: -25px;
+    right: -25px;
   }
 }

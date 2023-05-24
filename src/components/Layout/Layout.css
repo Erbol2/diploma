@@ -35,13 +35,13 @@
   .Layout {
     max-width: 789px;
   }
+  .Layout header > .Nav {
+    display: none;
+  }
 }
 @media screen and (max-width: 789px) {
   .Layout {
     max-width: 666px;
-  }
-  .Layout header > .Nav {
-    display: none;
   }
 }
 @media screen and (max-width: 689px) {

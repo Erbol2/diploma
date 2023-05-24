@@ -97,6 +97,12 @@
 .CategoryList .mini_nav {
   display: none;
 }
+@media screen and (max-width:1199px) {
+  .CategoryList .aside_nav {
+   position: absolute;
+   z-index: 99;
+  }
+}
 @media screen and (max-width: 689px) {
   .CategoryList {
     text-align: center;

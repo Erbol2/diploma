@@ -1,12 +1,14 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import arrow from '../../assets/arrow.png';
 import { AppContext } from '../../App';
 import $ from 'jquery';
 import "./Roulette.css";
+import audioFile from '../../assets/wheel.wav';
 
 export default function Roulette() {
   const { products } = useContext(AppContext);
+  const audioRef = useRef(null);
 
   function startRoulette() {
     $('.li-big').removeClass('li-big');
@@ -39,13 +41,14 @@ export default function Roulette() {
       );
 
       setTimeout(() => {
-        $('.list li.li-win').removeClass('li-win'); // Remove the class from any previous winner
+        $('.list li.li-win').removeClass('li-win');
         $('.list li:eq(' + x + ')').addClass('li-win');
         $('.card_num').val($('.li-win').attr('data-card'));
       }, 4300);
+
+      audioRef.current.play();
     }, 300);
   }
-
 
   function selfRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -74,18 +77,22 @@ export default function Roulette() {
           right: right,
         },
         0
-      );
+      )
     }
 
     $(window).on('load resize', windowSize);
 
     $(document).on('click', '.button', startRoulette);
 
+    const audioElement = audioRef.current;
+    audioElement.src = audioFile;
+    audioElement.load();
+
     return () => {
       $(window).off('load resize', windowSize);
       $(document).off('click', '.button', startRoulette);
     };
-  },);
+  }, );
 
   const output = products.map((product) => (
     <div key={product.id} className="Product">
@@ -164,6 +171,7 @@ export default function Roulette() {
           <span>Get the game <br /> for $9.99</span>
         </button>
       </div>
+      <audio ref={audioRef} />
     </div>
   );
 }

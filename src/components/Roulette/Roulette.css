@@ -17,7 +17,7 @@ li {
   max-width: 100px;
   transform: rotate(90deg);
   position: absolute;
-  top: 110px;
+  top: 160px;
   z-index: 2;
 }
 .btn {
@@ -78,7 +78,10 @@ li {
 .list .li-win img {
   width: 171px;
 }
-
+.Roulette h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 1199px) {
   .wraper {
     max-width: 799px;
@@ -102,7 +105,7 @@ li {
     max-width: 100px;
     transform: rotate(90deg);
     position: absolute;
-    top: 150px;
+    top: 200px;
     z-index: 2;
   }
 

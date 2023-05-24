@@ -97,6 +97,7 @@ export default function Roulette() {
 
   return (
     <div className="Roulette">
+      <h1>Try Your Luck</h1>
       <div className="arrow">
         <img className="arrow-bl" src={arrow} alt="arrow" />
       </div>

@@ -39,11 +39,13 @@ export default function Roulette() {
       );
 
       setTimeout(() => {
+        $('.list li.li-win').removeClass('li-win'); // Remove the class from any previous winner
         $('.list li:eq(' + x + ')').addClass('li-win');
         $('.card_num').val($('.li-win').attr('data-card'));
       }, 4300);
     }, 300);
   }
+
 
   function selfRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -138,6 +140,20 @@ export default function Roulette() {
               <li data-card="34">{output[16]}</li>
               <li data-card="35">{output[17]}</li>
               <li data-card="36">{output[18]}</li>
+              <li data-card="37">{output[12]}</li>
+              <li data-card="38">{output[13]}</li>
+              <li data-card="39">{output[14]}</li>
+              <li data-card="40">{output[15]}</li>
+              <li data-card="41">{output[16]}</li>
+              <li data-card="42">{output[17]}</li>
+              <li data-card="43">{output[18]}</li>
+              <li data-card="44">{output[12]}</li>
+              <li data-card="45">{output[13]}</li>
+              <li data-card="46">{output[14]}</li>
+              <li data-card="47">{output[15]}</li>
+              <li data-card="48">{output[16]}</li>
+              <li data-card="49">{output[17]}</li>
+              <li data-card="50">{output[18]}</li>
             </ul>
           </div>
         </div>

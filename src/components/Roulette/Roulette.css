@@ -42,7 +42,7 @@ li {
   border: 2px solid #ffba20;
   position: relative;
   margin: auto;
-  width: 944px;
+  max-width: 944px;
   overflow-x: hidden;
   margin: -58px 0;
 }
@@ -78,3 +78,21 @@ li {
 .list .li-win img {
   width: 171px;
 }
+
+@media screen and (max-width: 1199px) {
+  .wraper {
+    max-width: 799px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .wraper {
+    max-width: 630px;
+  }
+}
+@media screen and (max-width: 789px) {
+  .wraper {
+    max-width: 799px;
+  }
+}
+@media screen and (max-width: 689px) {
+  }

@@ -4,6 +4,9 @@
 .ProductPage .video_block {
   max-width: 600px;
 }
+.ProductPage .video_block video {
+  border-radius: 8px;
+}
 .ProductPage .content {
   display: flex;
   flex-direction: column;
@@ -32,6 +35,7 @@
 }
 .ProductPage .content .img_block img {
   max-width: 100%;
+  border-radius: 8px;
 }
 .ProductPage .content .description {
   max-width: 280px;

@@ -15,7 +15,7 @@
 .Auth a {
   text-decoration: none;
 }
-@media screen and (max-width: 789px) {
+@media screen and (max-width: 999px) {
   .Auth {
     margin: 15px 0 0;
   }

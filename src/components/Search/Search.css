@@ -35,15 +35,6 @@
 }
 @media screen and (max-width: 999px) {
   .Search {
-    margin: 20px 5px;
-    width: 180px;
-  }
-  .Search .searcher {
-    margin: 6px 20px 0 0;
-  }
-}
-@media screen and (max-width: 789px) {
-  .Search {
     width: 200px;
     margin: 15px 30px;
   }

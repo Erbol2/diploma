@@ -8,6 +8,10 @@
   border-top-left-radius: 7px;
   padding-bottom: 10px;
 }
+.ProductList .Product .img_block {
+  width: 250px;
+  height: 150px;
+}
 .ProductList .Product {
   display: flex;
   flex-direction: column;

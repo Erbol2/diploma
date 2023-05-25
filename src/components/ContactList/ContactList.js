@@ -21,13 +21,13 @@ export default function ContactList() {
           Stay connected with us through our social media channels to receive updates, news, and engage with our community.
           <br />
           <br />
-          <a href="/">
+          <a href="/" target="_blank">
             <i className="fa-brands fa-instagram instagram"></i>
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <i className="fa-brands fa-github github"></i>
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <i className="fa-brands fa-linkedin linkedin"></i>
           </a>
           <br />

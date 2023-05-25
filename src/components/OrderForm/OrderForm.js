@@ -39,12 +39,18 @@ export default function OrderForm() {
       <label>
         Name:
         <i className="fa-solid fa-user"></i>
-        <input type="text" name="name" required placeholder="First Name" />
+        <input type="text"
+          name="name"
+          required
+          placeholder="First Name" />
       </label>
       <label>
         Phohe:
         <i className="fa-solid fa-phone"></i>
-        <input type="tel" name="phone" required placeholder="+996(707) 707 707" />
+        <input type="tel"
+          name="phone"
+          required
+          placeholder="+996(707) 707 707" />
       </label>
       <button>Submit</button>
     </form>

@@ -33,13 +33,13 @@ export default function Footer() {
       <div className="bottom_footer">
         <p style={{opacity: "0.3"}}>Copyright © 2023, All Right Reserved Erbol</p>
         <div className="icons">
-          <a href="/">
+          <a href="/"  target="_blank">
             <i className="fa-brands fa-instagram instagram"></i>
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <i className="fa-brands fa-linkedin linkedin"></i>
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <i className="fa-brands fa-github github"></i>
           </a>
         </div></div>
